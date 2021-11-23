@@ -2,31 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-}
-
-#root {
-  height: 100%;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.main {
-  flex: 1 1 auto;
-  padding: 90px 0px 0px 0px;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1270px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 :focus,

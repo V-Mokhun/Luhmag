@@ -1,0 +1,63 @@
+/* stylelint-disable-next-line CssSyntaxError */
+// Variables -------------------------------------------------
+$minWidth: 320px;
+$mw: 1270px;
+$md1: $mw + 12px;
+$md2: 991.98px;
+$md3: 767.98px;
+$md4: 479.98px;
+
+// /Variables -------------------------------------------------
+
+// Null, General settings -----------------------------------------
+@import "vendor/null";
+
+body {
+  font-family: $fontFamlily;
+  font-size: $fontSize;
+  color: $textColor;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+// /Null, General settings -----------------------------------------
+
+// wrapper -----------------------------------------
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+}
+
+// /wrapper -----------------------------------------
+
+// Container -----------------------------------------
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: $mw + px;
+
+  @media (max-width: $md3) {
+    padding: 0 10px;
+  }
+}
+
+// /Container  -----------------------------------------
+
+#root {
+  height: 100%;
+}
+
+// Main block -----------------------------------------
+.main {
+  padding: 90px 0px 0px 0px;
+  flex: 1 1 auto;
+}
+
+// /Main block -----------------------------------------

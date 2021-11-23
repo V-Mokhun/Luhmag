@@ -1,0 +1,13 @@
+export const HOME_ROUTE = "/";
+export const CATALOG_ROUTE = "/catalog";
+export const ABOUT_ROUTE = "/about";
+export const CART_ROUTE = "/cart";
+export const CONTACTS_ROUTE = "/contacts";
+export const DELIVERY_ROUTE = "/delivery";
+export const NEWS_ROUTE = "/news";
+export const NEWS_ITEM_ROUTE = "/news/:id";
+export const SALES_ROUTE = "/sales";
+export const SALES_ITEM_ROUTE = "/sales/:id";
+export const ARTICLE_ROUTE = "/articles";
+export const ARTICLE_ITEM_ROUTE = "/articles/:id";
+export const THANK_ROUTE = "/thank";

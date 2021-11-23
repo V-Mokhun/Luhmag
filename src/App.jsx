@@ -1,13 +1,19 @@
+import AppRouter from "./components/AppRouter";
+import Footer from "./layout/Footer";
+import Header from "./layout/Header";
 import React from "react";
-import { Counter } from "./features/counter/Counter";
-import "./App.css";
+import { BrowserRouter } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="wrapper">
-      <Counter />
-    </div>
+    <BrowserRouter>
+      <div className="wrapper">
+        <Header />
+        <AppRouter />
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
