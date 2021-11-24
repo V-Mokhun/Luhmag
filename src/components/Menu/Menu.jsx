@@ -9,7 +9,7 @@ import {
   HOME_ROUTE,
   NEWS_ROUTE,
   SALES_ROUTE,
-} from "../routes/routes";
+} from "../../routes/routes";
 
 const Menu = ({ className }) => {
   const [dropdownActive, setDropdownActive] = useState(false);
@@ -47,17 +47,29 @@ const Menu = ({ className }) => {
           </a>
           <ul className={`menu__sublist ${!dropdownActive ? "hidden" : ""}`}>
             <li className="menu__subitem">
-              <Link className="menu__link menu__sublink" to={SALES_ROUTE}>
+              <Link
+                onClick={() => setDropdownActive(false)}
+                className="menu__link menu__sublink"
+                to={SALES_ROUTE}
+              >
                 Акции
               </Link>
             </li>
             <li className="menu__subitem">
-              <Link className="menu__link menu__sublink" to={NEWS_ROUTE}>
+              <Link
+                onClick={() => setDropdownActive(false)}
+                className="menu__link menu__sublink"
+                to={NEWS_ROUTE}
+              >
                 Новости
               </Link>
             </li>
             <li className="menu__subitem">
-              <Link className="menu__link menu__sublink" to={ARTICLE_ROUTE}>
+              <Link
+                onClick={() => setDropdownActive(false)}
+                className="menu__link menu__sublink"
+                to={ARTICLE_ROUTE}
+              >
                 Статьи
               </Link>
             </li>

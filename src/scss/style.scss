@@ -5,3 +5,7 @@
 @import "global";
 
 // Стили блоков сайта
+@import "../components/Header/header";
+@import "../components/Menu/menu";
+@import "../components/Footer/footer";
+@import "../modals/modal.scss";

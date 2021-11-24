@@ -1,0 +1,172 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 15px 15px 0;
+  background: rgba($black, 0.8);
+  transition: opacity 0.3s linear, visibility 0.3s linear, transform 0.3s linear;
+
+  &__inner {
+    position: relative;
+    margin: auto;
+    max-width: 1240px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background: $white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    background: url("../assets/img/icons/close.svg") center center/14px 14px
+      no-repeat;
+  }
+
+  &__body {
+    padding: 50px 30px 30px;
+    border-radius: 10px;
+    box-shadow: 10px 20px 45px rgba(0, 0, 0, 0.05);
+    background: $white;
+
+    @media (max-width: $md3) {
+      padding: 50px 20px 20px;
+    }
+  }
+}
+
+// --------------------------------------------------
+.call-modal {
+  .modal__inner {
+    &::after {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      border-radius: 50%;
+      width: 95px;
+      height: 95px;
+      box-shadow: 5px 7px 20px rgba(0, 0, 0, 0.1);
+      background: $white url("../assets/img/icons/phone.svg") center center/40px
+        40px no-repeat;
+      transform: translateX(-50%);
+
+      @media (max-width: $md3) {
+        top: -30px;
+        width: 60px;
+        height: 60px;
+        background: $white url("../assets/img/icons/phone.svg") center
+          center/30px 30px no-repeat;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0px 0px 15px 0px;
+
+    @media (max-width: $md3) {
+      margin: 0px 0px 10px 0px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0px 0px 50px 0px;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+
+    span {
+      font-weight: 600;
+    }
+
+    @media (max-width: $md3) {
+      margin: 0px 0px 40px 0px;
+      font-size: 14px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .form__item {
+      flex: 0 1 calc(50% - 20px);
+      margin: 0px 20px 40px 0px;
+
+      @media (max-width: $md3) {
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: $md4) {
+        flex: 1 1 100%;
+        margin: 0px 0px 30px 0px;
+      }
+    }
+
+    .form__button-wrapper {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+  }
+}
+
+// --------------------------------------------------
+.city-modal {
+  &__title {
+    margin: 0px 0px 60px 0px;
+  }
+
+  &__search {
+    max-width: 450px;
+    margin: 0px auto 70px;
+  }
+
+  &__list {
+    column-count: 6;
+    column-gap: 30px;
+  }
+
+  &__item {
+    margin: 0px 0px 25px 0px;
+    break-inside: avoid-column;
+  }
+
+  &__letter {
+    margin: 0px 0px 15px 0px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: $titleColor;
+  }
+
+  &__city {
+    margin: 0px 0px 15px 0px;
+
+    &:last-child {
+      margin: 0px 0px 0px 0px;
+    }
+  }
+
+  &__city-button {
+    background: transparent;
+    color: $secondaryColor;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
