@@ -1,11 +1,224 @@
 .about {
-  padding: 40px;
-  
-  &__inner {
+  padding: 0px 0px 45px 0px;
 
+  @media (max-width: $md2) {
+    padding: 45px 0px 35px;
   }
 
   &__title {
+    max-width: 675px;
+    margin: 0 auto 70px;
 
+    span {
+      font-weight: 400;
+    }
+
+    @media (max-width: $md2) {
+      margin: 0px auto 60px;
+    }
+
+    @media (max-width: $md3) {
+      margin: 0px auto 50px;
+    }
+
+    @media (max-width: $md4) {
+      margin: 0px auto 40px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    counter-reset: item;
+
+    @media (max-width: $md2) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: $md3) {
+      justify-content: center;
+    }
+  }
+
+  &__column {
+    @media (max-width: $md3) {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__column--left {
+  }
+
+  &__column--image {
+    @media (max-width: $md2) {
+      order: -1;
+      flex: 1 1 100%;
+    }
+  }
+
+  &__column--right {
+    @media (min-width: $md3) {
+      .about__item {
+        padding: 0px 130px 0px 50px;
+        text-align: right;
+
+        &::before {
+          left: auto;
+          right: 0;
+        }
+
+        &::after {
+          right: auto;
+          left: -140px;
+          transform: rotate(180deg) translateY(50%);
+        }
+      }
+    }
+
+    @media (max-width: $md3) {
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    @media (max-width: $md3) {
+      align-items: center;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin: 0px 0px 100px 0px;
+    padding: 0px 50px 0px 130px;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+    }
+
+    &::before {
+      counter-increment: item;
+      content: "0" counter(item);
+      left: 0;
+      top: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      font-weight: 600;
+      font-size: 42px;
+      line-height: 120%;
+      color: #1abbb3;
+      background: $white;
+      box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.05);
+      transform: translateY(-50%);
+
+      @media (max-width: $md4) {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    @media (min-width: $md3) {
+      &::after {
+        content: "";
+        right: -140px;
+        top: 50%;
+        width: 170px;
+        height: 16px;
+        background: url("../../assets/img/icons/about-line.svg") 0 0/175px 16px
+          no-repeat;
+        transform: translateY(-50%);
+      }
+
+      &:hover,
+      &:focus {
+        .item-about {
+          &__title {
+            display: none;
+          }
+
+          &__description {
+            display: block;
+          }
+        }
+
+        &::before {
+          content: "";
+          background: $secondaryColor url("../../assets/img/icons/info.svg")
+            center center/35px 35px no-repeat;
+        }
+      }
+    }
+
+    @media (max-width: $md3) {
+      padding: 0px 0px 0px 120px;
+    }
+
+    @media (max-width: $md4) {
+      margin: 0px 0px 60px 0px;
+      padding: 120px 0px 0px 0px;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    img {
+      height: auto;
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: $md2) {
+      text-align: center;
+    }
+  }
+}
+
+.item-about {
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: $titleColor;
+    max-width: 200px;
+
+    @media (max-width: $md3) {
+      display: none;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 160%;
+    color: $titleColor;
+    max-width: 200px;
+
+    @media (min-width: $md3) {
+      display: none;
+    }
+
+    @media (max-width:$md3){
+      position: relative;
+
+      &::after {
+         content: "";
+         position: absolute;
+         right: -15px;
+         bottom: 5px;
+         width: 16px;
+         height: 16px;
+         background: url('../../assets/img/icons/info-small.svg') 0 0/16px 16px no-repeat;
+      }
+    }
   }
 }

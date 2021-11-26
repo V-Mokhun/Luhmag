@@ -35,13 +35,13 @@
   }
 
   &__body {
-    padding: 50px 30px 30px;
+    padding: 50px 50px 30px;
     border-radius: 10px;
     box-shadow: 10px 20px 45px rgba(0, 0, 0, 0.05);
     background: $white;
 
     @media (max-width: $md3) {
-      padding: 50px 20px 20px;
+      padding: 50px 30px 20px;
     }
   }
 }
@@ -128,11 +128,11 @@
   &__title {
     margin: 0px 0px 60px 0px;
 
-    @media (max-width:$md2){
+    @media (max-width: $md2) {
       margin: 0px 0px 50px 0px;
     }
 
-    @media (max-width:$md3){
+    @media (max-width: $md3) {
       margin: 0px 0px 40px 0px;
     }
   }
@@ -141,15 +141,15 @@
     max-width: 450px;
     margin: 0px auto 70px;
 
-    @media (max-width:$md2){
-       margin-bottom: 60px;
+    @media (max-width: $md2) {
+      margin-bottom: 60px;
     }
 
-    @media (max-width:$md3){
+    @media (max-width: $md3) {
       margin-bottom: 50px;
     }
 
-    @media (max-width:$md4){
+    @media (max-width: $md4) {
       margin-bottom: 40px;
     }
   }
@@ -157,15 +157,15 @@
   &__list {
     column-count: 6;
 
-    @media (max-width:$md1){
+    @media (max-width: $md1) {
       column-count: 4;
     }
 
-    @media (max-width:$md3){
+    @media (max-width: $md3) {
       column-count: 2;
     }
 
-    @media (max-width:$md4){
+    @media (max-width: $md4) {
       column-count: 1;
     }
   }
@@ -174,7 +174,7 @@
     margin: 0px 0px 25px 0px;
     break-inside: avoid-column;
 
-    @media (max-width:$md3){
+    @media (max-width: $md3) {
       margin: 0px 0px 20px 0px;
     }
   }
@@ -202,6 +202,27 @@
     &:hover,
     &:focus {
       text-decoration: underline;
+    }
+  }
+}
+
+// --------------------------------------------------
+.about-modal {
+  &__title {
+    margin: 0px 0px 25px 0px;
+
+    @media (max-width:$md4){
+      font-size: 30px;
+    }
+  }
+
+  &__description {
+    margin: 0 auto 50px;
+    max-width: 750px;
+    line-height: 160%;
+
+    @media (max-width:$md4){
+      font-size: 14px;
     }
   }
 }

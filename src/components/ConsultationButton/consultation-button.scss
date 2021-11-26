@@ -1,8 +1,4 @@
 .consultation-button {
-  @media (min-width: $md3) {
-    display: none;
-  }
-
   position: fixed;
   z-index: 9;
   bottom: 0;
@@ -17,5 +13,13 @@
     height: 30px;
     background: url("../../assets/img/icons/phone-white.svg") 0 0/30px 30px no-repeat;
     transform: translateY(-50%);
+  }
+
+  @media (min-width: $md3) {
+    display: none;
+  }
+
+  @media (max-width:$md4){
+    padding: 15px 30px 15px 45px;
   }
 }
