@@ -1,14 +1,12 @@
 import React from "react";
+import FooterToTopButton from "./FooterToTopButton";
 
 const FooterBottomBody = () => {
   return (
     <div className="bottom-footer__body">
       <div className="container">
         <div className="bottom-footer__content">
-          <button
-            type="button"
-            className="bottom-footer__button to-top__button"
-          ></button>
+          <FooterToTopButton />
           <p className="bottom-footer__privacy">
             ООО Третья планета ИНН 7017448330 ОГРН 1187031063053
           </p>

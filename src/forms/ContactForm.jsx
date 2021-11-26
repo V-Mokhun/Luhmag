@@ -4,7 +4,7 @@ import MyInput from "../ui/MyInput";
 import MyButton from "../ui/MyButton";
 import PhoneInput from "../ui/PhoneInput";
 
-const ContactForm = ({ className, closeModal, ...props }) => {
+const ContactForm = ({ className, closeModal, buttonText, ...props }) => {
   return (
     <Formik
       initialValues={{ name: "", phone: "" }}
@@ -76,8 +76,12 @@ const ContactForm = ({ className, closeModal, ...props }) => {
             </Field>
           </div>
           <div className="form__button-wrapper">
-            <MyButton type="submit" disabled={isSubmitting || !isValid}>
-              Позвонить мне
+            <MyButton
+              className="form__button"
+              type="submit"
+              disabled={isSubmitting || !isValid}
+            >
+              {buttonText ? buttonText : "Позвонить мне"}
             </MyButton>
           </div>
         </Form>

@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 
 const Modal = ({ show, close, children, className }) => {
+  useEffect(() => {
+    if (show) {
+      document.body.classList.add("lock");
+    } else {
+      document.body.classList.remove("lock");
+    }
+  }, [show]);
+
   return ReactDOM.createPortal(
     <>
       {show ? (
