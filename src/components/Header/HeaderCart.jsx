@@ -5,8 +5,8 @@ import { CART_ROUTE } from "../../routes/routes";
 import cartImage from "../../assets/img/icons/cart.svg";
 
 const HeaderCart = () => {
-  const price = useSelector((state) => state.cart.price);
-  const productsCount = useSelector((state) => state.cart.productsCount);
+  const totalPrice = useSelector((state) => state.cart.totalPrice);
+  const productsCount = useSelector((state) => state.cart.products.length);
 
   return (
     <Link className="header__cart" to={CART_ROUTE}>
@@ -14,7 +14,7 @@ const HeaderCart = () => {
         <img src={cartImage} alt="Корзина" />
         <span className="header__cart-count">{productsCount}</span>
       </div>
-      <span className="header__cart-price">{price} ₽</span>
+      <span className="header__cart-price">{totalPrice} ₽</span>
     </Link>
   );
 };

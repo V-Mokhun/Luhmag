@@ -5,7 +5,7 @@ import Modal from "./Modal";
 
 const CallModal = (props) => {
   return (
-    <Modal className="call-modal" {...props}>
+    <Modal className="call-modal icon" {...props}>
       <MyTitle Component="h2" className="call-modal__title">
         Оставьте свои данные
       </MyTitle>

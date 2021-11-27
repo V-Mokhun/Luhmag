@@ -23,10 +23,12 @@ import {
   HOME_ROUTE,
   NEWS_ITEM_ROUTE,
   NEWS_ROUTE,
+  PRODUCT_ITEM_ROUTE,
   SALES_ITEM_ROUTE,
   SALES_ROUTE,
   THANK_ROUTE,
 } from "./routes";
+import Product from "../pages/Product";
 
 export const routes = [
   {
@@ -36,6 +38,10 @@ export const routes = [
   {
     path: CATALOG_ROUTE,
     Component: <Catalog />,
+  },
+  {
+    path: PRODUCT_ITEM_ROUTE,
+    Component: <Product />,
   },
   {
     path: ABOUT_ROUTE,

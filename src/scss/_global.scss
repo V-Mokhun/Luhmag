@@ -129,6 +129,18 @@ body {
   }
 }
 
+.button--secondary {
+  border-color: $secondaryColor;
+  color: $secondaryColor;
+  background: $white;
+
+  &:hover,
+  &:focus {
+    background: $secondaryColor;
+    color: $white;
+  }
+}
+
 // --------------------------------------------------
 .title {
   font-weight: 600;

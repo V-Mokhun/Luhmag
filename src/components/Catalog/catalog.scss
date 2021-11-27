@@ -1,0 +1,244 @@
+.catalog {
+  padding: 90px 0 40px;
+  background: #f7f7f7;
+  position: relative;
+
+  &__wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+
+    svg {
+      position: relative;
+      display: block;
+      width: calc(140% + 1.3px);
+      height: 50px;
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__shape-fill {
+    fill: #ffffff;
+  }
+
+  &__title {
+    margin: 0px 0px 45px 0px;
+
+    @media (max-width: $md2) {
+      margin: 0px 0px 40px 0px;
+    }
+
+    @media (max-width: $md3) {
+      margin: 0px 0px 35px 0px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 calc(25% - 30px);
+    margin: 0px 30px 30px 0px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba($black, 0.05);
+    background: $white;
+
+    @media (max-width: $md1) {
+      flex: 0 1 calc(33.333% - 25px);
+      margin-right: 25px;
+    }
+
+    @media (max-width: $md2) {
+      flex: 0 1 calc(50% - 20px);
+      margin: 0px 20px 25px 0px;
+    }
+
+    @media (max-width: $md3) {
+      flex: 1 1 100%;
+      margin: 0px 0px 20px 0px;
+
+      &:nth-child(n + 7) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $md4) {
+      margin: 0px 0px 15px 0px;
+    }
+  }
+}
+
+// --------------------------------------------------
+.item-catalog {
+  &__tags {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 30px 0px 0px;
+    width: 100%;
+
+    @media (max-width: $md3) {
+      justify-content: center;
+    }
+  }
+
+  &__tag {
+    margin: 0px 10px 10px 0px;
+    border-radius: 30px;
+    padding: 5px 15px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 120%;
+    text-align: center;
+    color: $white;
+  }
+
+  &__tag--hit {
+    background: #1abbb3;
+  }
+
+  &__tag--sale {
+    background: #f39aa4;
+  }
+
+  &__tag--new {
+    background: #f4cfd3;
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 20px;
+
+    @media (max-width: $md3) {
+      padding-bottom: 10px;
+    }
+
+    &:hover,
+    &:focus {
+      .item-catalog__title {
+        color: $secondaryColor;
+      }
+    }
+  }
+
+  &__image {
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+
+    img {
+      height: auto;
+      max-width: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    margin: 0px 0px 10px 0px;
+    font-weight: 600;
+    line-height: 130%;
+    text-align: center;
+    color: $titleColor;
+    transition: color 0.3s linear;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  &__price-old {
+    text-decoration-line: line-through;
+    color: #b9b9b9;
+    margin: 0px 10px 10px 0px;
+  }
+
+  &__price-new {
+    font-weight: 600;
+    color: $titleColor;
+    margin: 0px 0px 10px 0px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    flex: 1 1 auto;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 120%;
+    text-align: center;
+    transition: border-color 0.3s linear, background 0.3s linear,
+      color 0.3s linear;
+  }
+
+  &__button-buy {
+    border: 1px solid $secondaryColor;
+    border-radius: 10px 0px 0px 0px;
+    padding: 15px;
+    color: $secondaryColor;
+    background: $white;
+
+    &:hover,
+    &:focus {
+      background: $secondaryColor;
+      color: $white;
+      border-right-color: $white;
+    }
+  }
+
+  &__button-cart {
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 0px 10px 0px 0px;
+    padding: 15px 15px 16px 50px;
+    color: $white;
+    background: $secondaryColor;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      width: 23px;
+      height: 21px;
+      background: url("../../assets/img/icons/cart-white.svg") 0 0/23px 21px
+        no-repeat;
+      transform: translateY(-50%);
+      transition: background 0.3s linear;
+    }
+
+    &:hover,
+    &:focus {
+      color: $secondaryColor;
+      background: $white;
+      border-color: $secondaryColor;
+
+      &::before {
+        background: url("../../assets/img/icons/cart.svg") 0 0/23px 21px
+          no-repeat;
+      }
+    }
+  }
+}
