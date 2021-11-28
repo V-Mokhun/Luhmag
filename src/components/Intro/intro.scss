@@ -5,6 +5,8 @@
   &::after {
     content: "";
     position: absolute;
+    top: auto;
+    left: auto;
     bottom: 0;
     right: 125px;
     width: 110px;
@@ -19,6 +21,7 @@
     }
 
     @media (max-width: $md2) {
+      display: block;
       right: 0;
       bottom: 10px;
       width: 55px;

@@ -1,5 +1,3 @@
-import Article from "../pages/Article";
-import ArticleItem from "../pages/ArticleItem";
 import React from "react";
 import About from "../pages/About";
 import Cart from "../pages/Cart";
@@ -14,8 +12,6 @@ import Thank from "../pages/Thank";
 import Home from "../pages/Home";
 import {
   ABOUT_ROUTE,
-  ARTICLE_ITEM_ROUTE,
-  ARTICLE_ROUTE,
   CART_ROUTE,
   CATALOG_ROUTE,
   CONTACTS_ROUTE,
@@ -74,14 +70,6 @@ export const routes = [
   {
     path: SALES_ITEM_ROUTE,
     Component: <SalesItem />,
-  },
-  {
-    path: ARTICLE_ROUTE,
-    Component: <Article />,
-  },
-  {
-    path: ARTICLE_ITEM_ROUTE,
-    Component: <ArticleItem />,
   },
   {
     path: THANK_ROUTE,

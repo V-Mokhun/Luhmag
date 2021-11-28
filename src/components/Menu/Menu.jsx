@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ABOUT_ROUTE,
-  ARTICLE_ROUTE,
   CATALOG_ROUTE,
   CONTACTS_ROUTE,
   DELIVERY_ROUTE,
@@ -62,15 +61,6 @@ const Menu = ({ className }) => {
                 to={NEWS_ROUTE}
               >
                 Новости
-              </Link>
-            </li>
-            <li className="menu__subitem">
-              <Link
-                onClick={() => setDropdownActive(false)}
-                className="menu__link menu__sublink"
-                to={ARTICLE_ROUTE}
-              >
-                Статьи
               </Link>
             </li>
           </ul>
