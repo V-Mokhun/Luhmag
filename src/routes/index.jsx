@@ -8,7 +8,6 @@ import News from "../pages/News";
 import NewsItem from "../pages/NewsItem";
 import Sales from "../pages/Sales";
 import SalesItem from "../pages/SalesItem";
-import Thank from "../pages/Thank";
 import Home from "../pages/Home";
 import {
   ABOUT_ROUTE,
@@ -22,9 +21,12 @@ import {
   PRODUCT_ITEM_ROUTE,
   SALES_ITEM_ROUTE,
   SALES_ROUTE,
-  THANK_ROUTE,
+  THANK_CONTACT_ROUTE,
+  THANK_ORDER_ROUTE,
 } from "./routes";
 import Product from "../pages/Product";
+import ThankContact from "../pages/ThankContact";
+import ThankOrder from "../pages/ThankOrder";
 
 export const routes = [
   {
@@ -72,7 +74,11 @@ export const routes = [
     Component: <SalesItem />,
   },
   {
-    path: THANK_ROUTE,
-    Component: <Thank />,
+    path: THANK_CONTACT_ROUTE,
+    Component: <ThankContact />,
+  },
+  {
+    path: THANK_ORDER_ROUTE,
+    Component: <ThankOrder />,
   },
 ];

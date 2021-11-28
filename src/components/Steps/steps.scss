@@ -123,6 +123,8 @@
   }
 
   &__item--button {
+    flex: 0 1 280px;
+
     @media (max-width: 600px) {
       flex: 1 1 auto;
       text-align: center;
