@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import CatalogThankModal from "../../modals/CatalogThankModal/CatalogThankModal";
-import CatalogBuyModal from "../../modals/CatalogBuyModal/CatalogBuyModal";
+import CatalogBuyModal from "../../modals/QuickBuyModal/QuickBuyModal";
 import { PRODUCT_ROUTE } from "../../routes/routes";
 
 const CatalogItem = ({

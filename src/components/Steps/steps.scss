@@ -1,0 +1,176 @@
+.steps {
+  position: relative;
+  background: url("../../assets/img/content/left-bg.png") center center/100%
+    100% no-repeat;
+
+  margin: 0px 0px 100px 0px;
+  padding: 50px 0px 0px 0px;
+
+  @media (max-width: $md1) {
+    padding: 50px 0px 30px;
+    margin: 0;
+  }
+
+  @media (max-width: $md2) {
+    background: url("../../assets/img/content/left-bg-mobile.png") center
+      center/100% 100% no-repeat;
+  }
+
+  &__container {
+    max-width: 1470px;
+  }
+
+  &__inner {
+    display: flex;
+
+    @media (max-width: $md1) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__image {
+    margin: -50px 0px -100px -100px;
+    filter: drop-shadow(50px 50px 50px rgba(0, 0, 0, 0.1));
+    pointer-events: none;
+
+    img {
+      height: auto;
+      max-width: 100%;
+      object-fit: cover;
+
+      @media (max-width: $md1) {
+        max-height: 300px;
+      }
+    }
+
+    @media (max-width: $md1) {
+      margin: 0;
+    }
+  }
+
+  &__content {
+    color: $white;
+  }
+
+  &__title {
+    margin: 0px 0px 50px 0px;
+    color: $white;
+
+    @media (max-width: $md1) {
+      display: none;
+    }
+  }
+
+  &__title-mobile {
+    flex: 1 1 100%;
+    margin: 0px 0px 30px 0px;
+    color: $white;
+
+    @media (min-width: $md1) {
+      display: none;
+    }
+
+    @media (max-width: $md2) {
+      margin: 0px 0px 15px 0px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 0 1 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 20px 25px 0px;
+    text-align: center;
+
+    @media (min-width: $md2) {
+      &:nth-child(3n) {
+        padding: 0;
+
+        .steps__count::after {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: 1400px) {
+      flex: 0 1 240px;
+      margin-right: 15px;
+    }
+
+    @media (max-width: $md1) {
+      flex: 0 1 calc(33.333% - 30px);
+    }
+
+    @media (max-width: $md2) {
+      flex: 0 1 calc(50% - 20px);
+    }
+  }
+
+  &__item--final {
+    @media (max-width: 600px) {
+      flex: 1 1 100%;
+      margin: 0px 0px 60px 0px;
+    }
+  }
+
+  &__item--button {
+    @media (max-width: 600px) {
+      flex: 1 1 auto;
+      text-align: center;
+    }
+  }
+
+  &__count {
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 120%;
+    color: #ffffff;
+
+    @media (min-width: $md2) {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -200px;
+        top: 50%;
+        width: 170px;
+        height: 16px;
+        background: url("../../assets/img/icons/how-to-line.svg") 0 0 no-repeat;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__description {
+    line-height: 150%;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    margin: 0px 0px 20px 0px;
+
+    img {
+      height: auto;
+      max-width: 50px;
+      object-fit: cover;
+    }
+  }
+
+  &__button {
+    padding: 15px 30px;
+    background: #1abbb3;
+  }
+}

@@ -5,6 +5,7 @@ import Catalog from "../components/Catalog/Catalog";
 import ConsultationChoice from "../components/Consultation/ConsultationChoice/ConsultationChoice";
 import ConsultationButton from "../components/ConsultationButton/ConsultationButton";
 import Intro from "../components/Intro/Intro";
+import Steps from "../components/Steps/Steps";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Catalog />
       <ConsultationChoice />
       <Benefits />
+      <Steps />
     </>
   );
 };

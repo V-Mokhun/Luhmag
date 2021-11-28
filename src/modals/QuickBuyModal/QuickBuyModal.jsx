@@ -4,31 +4,31 @@ import MyCounter from "../../ui/MyCounter";
 import MyTitle from "../../ui/MyTitle";
 import Modal from "../Modal";
 
-const CatalogThankModal = ({ product, close, ...props }) => {
+const QuickBuyModal = ({ product, close, ...props }) => {
   const { image, title: name, price } = product;
   const [count, setCount] = useState(1);
   const totalPrice = count * price;
 
   return (
     <Modal
-      className="catalog-buy-modal icon contact-icon"
+      className="quick-buy-modal icon contact-icon"
       close={close}
       {...props}
     >
-      <MyTitle Component="h3" className="catalog-buy-modal__title">
+      <MyTitle Component="h3" className="quick-buy-modal__title">
         Купить товар в 1 клик
       </MyTitle>
-      <p className="catalog-buy-modal__description">
+      <p className="quick-buy-modal__description">
         Сделайте заказ и наш менеджер свяжется с Вами
         <span> в течение 3 минут</span>
       </p>
-      <div className="catalog-buy-modal__product">
-        <div className="catalog-buy-modal__image">
+      <div className="quick-buy-modal__product">
+        <div className="quick-buy-modal__image">
           <img src={image} alt={name} />
         </div>
-        <h4 className="catalog-buy-modal__name">{name}</h4>
+        <h4 className="quick-buy-modal__name">{name}</h4>
         <MyCounter
-          className="catalog-buy-modal__counter"
+          className="quick-buy-modal__counter"
           total={count}
           onDecrease={() => {
             if (count <= 1) setCount(1);
@@ -36,10 +36,10 @@ const CatalogThankModal = ({ product, close, ...props }) => {
           }}
           onIncrease={() => setCount((count) => (count += 1))}
         ></MyCounter>
-        <div className="catalog-buy-modal__price">{totalPrice}₽</div>
+        <div className="quick-buy-modal__price">{totalPrice}₽</div>
       </div>
       <ContactForm
-        className="catalog-buy-modal__form"
+        className="quick-buy-modal__form"
         closeModal={() => {
           setCount(1);
           close();
@@ -50,4 +50,4 @@ const CatalogThankModal = ({ product, close, ...props }) => {
   );
 };
 
-export default CatalogThankModal;
+export default QuickBuyModal;
