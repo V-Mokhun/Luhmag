@@ -1,0 +1,81 @@
+.city-modal {
+  &__title {
+    margin: 0px 0px 60px 0px;
+
+    @media (max-width: $md2) {
+      margin: 0px 0px 50px 0px;
+    }
+
+    @media (max-width: $md3) {
+      margin: 0px 0px 40px 0px;
+    }
+  }
+
+  &__search {
+    max-width: 450px;
+    margin: 0px auto 70px;
+
+    @media (max-width: $md2) {
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: $md3) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: $md4) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    column-count: 6;
+
+    @media (max-width: $md1) {
+      column-count: 4;
+    }
+
+    @media (max-width: $md3) {
+      column-count: 2;
+    }
+
+    @media (max-width: $md4) {
+      column-count: 1;
+    }
+  }
+
+  &__item {
+    margin: 0px 0px 25px 0px;
+    break-inside: avoid-column;
+
+    @media (max-width: $md3) {
+      margin: 0px 0px 20px 0px;
+    }
+  }
+
+  &__letter {
+    margin: 0px 0px 15px 0px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: $titleColor;
+  }
+
+  &__city {
+    margin: 0px 0px 15px 0px;
+
+    &:last-child {
+      margin: 0px 0px 0px 0px;
+    }
+  }
+
+  &__city-button {
+    background: transparent;
+    color: $secondaryColor;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

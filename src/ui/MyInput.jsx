@@ -11,14 +11,14 @@ const MyInput = ({
 }) => {
   return (
     <label className={`label ${labelClassName ? labelClassName : ""}`}>
-      <span className="help">{helpMessage}</span>
+      <span className="label-help">{helpMessage}</span>
       <input
         ref={innerRef}
         className={`input ${className ? className : ""}`}
         {...field}
         {...props}
       />
-      <span className="error">{error}</span>
+      <span className="label-error">{error}</span>
     </label>
   );
 };

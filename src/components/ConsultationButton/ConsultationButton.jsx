@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CallModal from "../../modals/CallModal";
+import CallModal from "../../modals/CallModal/CallModal";
 import MyButton from "../../ui/MyButton";
 
 const ConsultationButton = () => {

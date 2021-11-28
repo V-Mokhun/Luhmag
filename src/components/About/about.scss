@@ -72,9 +72,6 @@
         }
       }
     }
-
-    @media (max-width: $md3) {
-    }
   }
 
   &__list {
@@ -159,6 +156,7 @@
     }
 
     @media (max-width: $md3) {
+      margin: 0px 0px 80px 0px;
       padding: 0px 0px 0px 120px;
     }
 
@@ -205,17 +203,18 @@
       display: none;
     }
 
-    @media (max-width:$md3){
+    @media (max-width: $md3) {
       position: relative;
 
       &::after {
-         content: "";
-         position: absolute;
-         right: -15px;
-         bottom: 5px;
-         width: 16px;
-         height: 16px;
-         background: url('../../assets/img/icons/info-small.svg') 0 0/16px 16px no-repeat;
+        content: "";
+        position: absolute;
+        right: -15px;
+        bottom: 5px;
+        width: 16px;
+        height: 16px;
+        background: url("../../assets/img/icons/info-small.svg") 0 0/16px 16px
+          no-repeat;
       }
     }
   }

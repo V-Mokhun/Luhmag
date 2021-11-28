@@ -3,6 +3,14 @@
   background: #f7f7f7;
   position: relative;
 
+  @media (max-width: $md3) {
+    padding: 70px 0px 35px;
+  }
+
+  @media (max-width: $md4) {
+    padding: 50px 0px 30px;
+  }
+
   &__wave {
     position: absolute;
     top: 0;
@@ -17,6 +25,10 @@
       width: calc(140% + 1.3px);
       height: 50px;
       transform: rotateY(180deg);
+
+      @media (max-width: $md3) {
+        height: 25px;
+      }
     }
   }
 
@@ -40,6 +52,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0px 0px 10px 0px;
   }
 
   &__item {
@@ -72,6 +85,24 @@
 
     @media (max-width: $md4) {
       margin: 0px 0px 15px 0px;
+    }
+  }
+
+  &__link-wrapper {
+    text-align: center;
+  }
+
+  &__link {
+    display: inline-block;
+    background: #1abbb3;
+
+    @media (max-width: $md3) {
+      padding: 15px 30px;
+    }
+
+    @media (max-width: $md4) {
+      padding: 15px 20px;
+      font-size: 12px;
     }
   }
 }
@@ -212,7 +243,7 @@
     position: relative;
     border: 1px solid transparent;
     border-radius: 0px 10px 0px 0px;
-    padding: 15px 15px 16px 50px;
+    padding: 15px 15px 15px 50px;
     color: $white;
     background: $secondaryColor;
 

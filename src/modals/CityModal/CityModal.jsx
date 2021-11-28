@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { setCity } from "../store/user/userReducer";
-import MyInput from "../ui/MyInput";
-import MyTitle from "../ui/MyTitle";
-import Modal from "./Modal";
+import { setCity } from "../../store/user/userReducer";
+import MyInput from "../../ui/MyInput";
+import MyTitle from "../../ui/MyTitle";
+import Modal from "../Modal";
 
 const CITIES = [
   ["Абакан", "Ангарск", "Архангельск", "  Астрахань"],

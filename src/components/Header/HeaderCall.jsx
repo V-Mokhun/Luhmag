@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CallModal from "../../modals/CallModal";
+import CallModal from "../../modals/CallModal/CallModal";
 
 const HeaderCall = () => {
   const [modal, setModal] = useState(false);

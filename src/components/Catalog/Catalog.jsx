@@ -4,6 +4,9 @@ import image from "../../assets/img/content/catalog-1.png";
 import CatalogItem from "./CatalogItem";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cart/cartReducer";
+import MyButton from "../../ui/MyButton";
+import { Link } from "react-router-dom";
+import { CATALOG_ROUTE } from "../../routes/routes";
 
 const PRODUCTS = [
   {
@@ -180,6 +183,15 @@ const Catalog = () => {
             );
           })}
         </ul>
+        <div className="catalog__link-wrapper">
+          <MyButton
+            Component={Link}
+            to={CATALOG_ROUTE}
+            className="catalog__link"
+          >
+            Посмотреть все слуховые аппараты
+          </MyButton>
+        </div>
       </div>
     </section>
   );

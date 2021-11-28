@@ -1,6 +1,6 @@
 import React from "react";
-import MyTitle from "../ui/MyTitle";
-import Modal from "./Modal";
+import MyTitle from "../../ui/MyTitle";
+import Modal from "../Modal";
 
 const AboutModal = ({ title, description, ...props }) => {
   return (

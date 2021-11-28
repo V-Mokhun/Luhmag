@@ -6,7 +6,7 @@ import cartImage from "../../assets/img/icons/cart.svg";
 
 const HeaderCart = () => {
   const totalPrice = useSelector((state) => state.cart.totalPrice);
-  const productsCount = useSelector((state) => state.cart.products.length);
+  const productsCount = useSelector((state) => state.cart.productsCount);
 
   return (
     <Link className="header__cart" to={CART_ROUTE}>

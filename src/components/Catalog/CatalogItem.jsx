@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import CatalogThankModal from "../../modals/CatalogThankModal";
+import CatalogThankModal from "../../modals/CatalogThankModal/CatalogThankModal";
+import CatalogBuyModal from "../../modals/CatalogBuyModal/CatalogBuyModal";
 import { PRODUCT_ROUTE } from "../../routes/routes";
 
 const CatalogItem = ({
@@ -15,9 +16,10 @@ const CatalogItem = ({
   price,
   onAdd,
 }) => {
-  const productsCount = useSelector((state) => state.cart.products.length);
+  const productsCount = useSelector((state) => state.cart.productsCount);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   const [thankModal, setThankModal] = useState(false);
+  const [buyModal, setBuyModal] = useState(false);
 
   return (
     <>
@@ -55,6 +57,7 @@ const CatalogItem = ({
           <button
             className="item-catalog__button item-catalog__button-buy"
             type="button"
+            onClick={() => setBuyModal(true)}
           >
             Купить в 1 клик
           </button>
@@ -75,6 +78,15 @@ const CatalogItem = ({
         totalPrice={totalPrice}
         show={thankModal}
         close={() => setThankModal(false)}
+      />
+      <CatalogBuyModal
+        show={buyModal}
+        close={() => setBuyModal(false)}
+        product={{
+          image,
+          title,
+          price,
+        }}
       />
     </>
   );

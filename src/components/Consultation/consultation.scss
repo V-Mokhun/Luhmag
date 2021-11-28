@@ -1,0 +1,250 @@
+.consultation {
+  position: relative;
+
+  background: url("../../assets/img/content/consultation-bg.png") center
+    center/100% 100% no-repeat;
+  background-size: cover;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 125px;
+    width: 90px;
+    height: 95px;
+    pointer-events: none;
+    user-select: none;
+    background: url("../../assets/img/content/consultation-icon.svg") 0 0/90px
+      95px no-repeat;
+
+    @media (max-width: 1700px) {
+      left: 20px;
+    }
+
+    @media (max-width: $md2) {
+      display: none;
+    }
+  }
+
+  &__container {
+    max-width: 1470px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $md2) {
+      justify-content: center;
+      flex-wrap: wrap;
+
+      position: relative;
+      margin: 0 -15px 30px;
+      padding: 40px 15px 20px;
+
+      background: $secondaryColor
+        url("../../assets/img/content/consultation-bg.png") center center/100%
+        100% no-repeat;
+    }
+
+    @media (max-width: $md3) {
+      padding: 25px 15px 20px;
+      background: $secondaryColor
+        url("../../assets/img/content/consultation-bg-mobile.png") center
+        center/100% 100% no-repeat;
+    }
+  }
+
+  &__content {
+    flex: 0 1 580px;
+    margin: 0px 20px 0px 0px;
+    color: $white;
+
+    @media (max-width: $md2) {
+      margin: 0px 0px 10px 0px;
+      padding: 30px 0px 0px 0px;
+      flex: 1 1 100%;
+      text-align: center;
+    }
+
+    @media (max-width: $md3) {
+      padding: 20px 0px 0px 0px;
+    }
+
+    @media (max-width: $md4) {
+      padding: 10px 0px 0px 0px;
+    }
+  }
+
+  &__title {
+    margin: 0px 0px 30px 0px;
+    color: $white;
+    text-align: left;
+
+    @media (max-width: $md1) {
+      font-size: 38px;
+    }
+
+    @media (max-width: $md2) {
+      font-size: 34px;
+      text-align: center;
+    }
+
+    @media (max-width: $md3) {
+      margin: 0px 0px 25px 0px;
+      font-size: 30px;
+    }
+
+    @media (max-width: $md4) {
+      font-size: 26px;
+    }
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    margin: 0px 0px 40px 0px;
+
+    @media (max-width: $md3) {
+      margin: 0px 0px 30px 0px;
+      font-size: 18px;
+    }
+
+    @media (max-width: $md4) {
+      margin: 0px 0px 20px 0px;
+      font-size: 16px;
+    }
+  }
+
+  &__form {
+    max-width: 340px;
+    color: $white;
+
+    @media (max-width: $md2) {
+      display: none;
+    }
+
+    .form__item {
+      margin: 0px 0px 40px 0px;
+    }
+
+    .form__button {
+      width: 100%;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+      background: #1abbb3;
+
+      &:disabled {
+        background: gray;
+      }
+
+      &:hover,
+      &:focus {
+        color: #1abbb3;
+        background: $white;
+        border-color: #1abbb3;
+      }
+    }
+
+    .label-help {
+      color: $white;
+    }
+
+    .label-error {
+      color: rgba($white, 0.8);
+    }
+  }
+
+  &__image {
+    filter: drop-shadow(-50px 50px 200px rgba(0, 0, 0, 0.4));
+
+    img {
+      height: auto;
+      max-width: 100%;
+      object-fit: cover;
+
+      @media (max-width: $md2) {
+        max-height: 500px;
+      }
+    }
+
+    @media (max-width: $md3) {
+      margin: -30px 0px 0px 0px;
+    }
+  }
+
+  &__mobile {
+    @media (min-width: $md2) {
+      display: none;
+    }
+  }
+}
+
+.choice-consultation {
+  padding: 50px 0;
+
+  @media (max-width: $md2) {
+    padding: 0px 0px 60px 0px;
+    background: transparent;
+  }
+
+  @media (max-width: $md3) {
+    background: transparent;
+  }
+
+  &__wave-top,
+  &__wave-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+
+    svg {
+      position: relative;
+      display: block;
+      width: calc(135% + 1.3px);
+      height: 63px;
+
+      @media (max-width: $md3) {
+        height: 30px;
+      }
+    }
+  }
+
+  &__wave-top {
+    top: 0;
+
+    .choice-consultation__shape-fill {
+      fill: #f7f7f7;
+    }
+  }
+
+  &__wave-bottom {
+    bottom: 0;
+    transform: rotate(180deg);
+  }
+
+  &__shape-fill {
+    fill: #ffffff;
+  }
+
+  .consultation__mobile-form {
+    .form__item {
+      margin: 0px 0px 40px 0px;
+    }
+
+    .form__button-wrapper {
+      text-align: center;
+    }
+
+    .form__button {
+      @media (max-width: $md4) {
+        padding: 15px 30px;
+      }
+    }
+  }
+}

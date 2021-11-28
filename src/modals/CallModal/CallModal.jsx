@@ -1,11 +1,11 @@
 import React from "react";
-import ContactForm from "../forms/ContactForm";
-import MyTitle from "../ui/MyTitle";
-import Modal from "./Modal";
+import ContactForm from "../../forms/ContactForm";
+import MyTitle from "../../ui/MyTitle";
+import Modal from "../Modal";
 
 const CallModal = (props) => {
   return (
-    <Modal className="call-modal icon" {...props}>
+    <Modal className="call-modal icon contact-icon" {...props}>
       <MyTitle Component="h2" className="call-modal__title">
         Оставьте свои данные
       </MyTitle>

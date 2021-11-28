@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CART_ROUTE } from "../routes/routes";
-import MyButton from "../ui/MyButton";
-import MyTitle from "../ui/MyTitle";
-import Modal from "./Modal";
+import { CART_ROUTE } from "../../routes/routes";
+import MyButton from "../../ui/MyButton";
+import MyTitle from "../../ui/MyTitle";
+import Modal from "../Modal";
 
 const CatalogThankModal = ({ count, totalPrice, close, ...props }) => {
   return (

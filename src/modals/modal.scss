@@ -34,6 +34,20 @@
     }
   }
 
+  &.contact-icon {
+    .modal__inner {
+      &::after {
+        background: $white url("../assets/img/icons/phone.svg") center
+          center/40px 40px no-repeat;
+
+        @media (max-width: $md3) {
+          background: $white url("../assets/img/icons/phone.svg") center
+            center/30px 30px no-repeat;
+        }
+      }
+    }
+  }
+
   &__inner {
     position: relative;
     margin: auto;
@@ -68,244 +82,8 @@
   }
 }
 
-// --------------------------------------------------
-.call-modal {
-  .modal__inner {
-    &::after {
-      background: $white url("../assets/img/icons/phone.svg") center center/40px
-        40px no-repeat;
-
-      @media (max-width: $md3) {
-        background: $white url("../assets/img/icons/phone.svg") center
-          center/30px 30px no-repeat;
-      }
-    }
-  }
-
-  &__title {
-    margin: 0px 0px 15px 0px;
-
-    @media (max-width: $md3) {
-      margin: 0px 0px 10px 0px;
-    }
-  }
-
-  &__subtitle {
-    margin: 0px 0px 50px 0px;
-    font-size: 16px;
-    line-height: 150%;
-    text-align: center;
-
-    span {
-      font-weight: 600;
-    }
-
-    @media (max-width: $md3) {
-      margin: 0px 0px 40px 0px;
-      font-size: 14px;
-    }
-  }
-
-  &__form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-
-    .form__item {
-      flex: 0 1 calc(50% - 20px);
-      margin: 0px 20px 40px 0px;
-
-      @media (max-width: $md3) {
-        margin-bottom: 30px;
-      }
-
-      @media (max-width: $md4) {
-        flex: 1 1 100%;
-        margin: 0px 0px 30px 0px;
-      }
-    }
-
-    .form__button-wrapper {
-      flex: 1 1 100%;
-      text-align: center;
-    }
-  }
-}
-
-// --------------------------------------------------
-.city-modal {
-  &__title {
-    margin: 0px 0px 60px 0px;
-
-    @media (max-width: $md2) {
-      margin: 0px 0px 50px 0px;
-    }
-
-    @media (max-width: $md3) {
-      margin: 0px 0px 40px 0px;
-    }
-  }
-
-  &__search {
-    max-width: 450px;
-    margin: 0px auto 70px;
-
-    @media (max-width: $md2) {
-      margin-bottom: 60px;
-    }
-
-    @media (max-width: $md3) {
-      margin-bottom: 50px;
-    }
-
-    @media (max-width: $md4) {
-      margin-bottom: 40px;
-    }
-  }
-
-  &__list {
-    column-count: 6;
-
-    @media (max-width: $md1) {
-      column-count: 4;
-    }
-
-    @media (max-width: $md3) {
-      column-count: 2;
-    }
-
-    @media (max-width: $md4) {
-      column-count: 1;
-    }
-  }
-
-  &__item {
-    margin: 0px 0px 25px 0px;
-    break-inside: avoid-column;
-
-    @media (max-width: $md3) {
-      margin: 0px 0px 20px 0px;
-    }
-  }
-
-  &__letter {
-    margin: 0px 0px 15px 0px;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 120%;
-    color: $titleColor;
-  }
-
-  &__city {
-    margin: 0px 0px 15px 0px;
-
-    &:last-child {
-      margin: 0px 0px 0px 0px;
-    }
-  }
-
-  &__city-button {
-    background: transparent;
-    color: $secondaryColor;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-}
-
-// --------------------------------------------------
-.about-modal {
-  &__title {
-    margin: 0px 0px 25px 0px;
-
-    @media (max-width: $md4) {
-      font-size: 30px;
-    }
-  }
-
-  &__description {
-    margin: 0 auto 50px;
-    max-width: 750px;
-    line-height: 160%;
-
-    @media (max-width: $md4) {
-      font-size: 14px;
-    }
-  }
-}
-
-// --------------------------------------------------
-.catalog-thank-modal {
-  .modal__inner {
-    &::after {
-      background: $white url("../assets/img/icons/check-big.svg") center
-        center/40px 40px no-repeat;
-
-      @media (max-width: $md3) {
-        background: $white url("../assets/img/icons/check-big.svg") center
-          center/30px 30px no-repeat;
-      }
-    }
-  }
-
-  &__title {
-    margin: 0px 0px 10px 0px;
-  }
-
-  &__description {
-    margin: 0px 0px 40px 0px;
-    line-height: 160%;
-    text-align: center;
-
-    span {
-      font-weight: 600;
-    }
-
-    @media (max-width: $md2) {
-      margin: 0px 0px 30px 0px;
-    }
-
-    @media (max-width: $md3) {
-      margin: 0px 0px 25px 0px;
-    }
-
-    @media (max-width:$md4){
-      font-size: 14px;
-    }
-  }
-
-  &__actions {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    @media (max-width: $md3) {
-      flex-direction: column;
-    }
-  }
-
-  &__link {
-    margin: 0px 30px 15px 0px;
-    text-align: center;
-
-    @media (max-width: $md3) {
-      margin: 0px 0px 15px 0px;
-    }
-
-    @media (max-width: $md4) {
-      padding: 15px 25px;
-    }
-  }
-
-  &__button {
-    margin: 0px 0px 15px 0px;
-
-    @media (max-width: $md4) {
-      padding: 15px 25px;
-    }
-  }
-}
+@import "./AboutModal/about-modal";
+@import "./CallModal/call-modal";
+@import "./CityModal/city-modal";
+@import "./CatalogThankModal/catalog-thank-modal";
+@import "./CatalogBuyModal/catalog-buy-modal";

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CityModal from "../../modals/CityModal";
+import CityModal from "../../modals/CityModal/CityModal";
 
 const HeaderCity = ({ city }) => {
   const [modal, setModal] = useState(false);
