@@ -1,22 +1,19 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { Navigate } from "react-router";
-import { HOME_ROUTE } from "../routes/routes";
+import Breadcrumps from "../components/Breadcrumps/Breadcrumps";
+import BreadcrumpsItem from "../components/Breadcrumps/BreadcrumpsItem";
+import Thank from "../components/Thank/Thank";
+import image from "../assets/img/content/thanks-contact.png";
 
 const ThankContact = () => {
-  const name = useSelector((state) => state.user.name);
-  const phone = useSelector((state) => state.user.phone);
-
-  if (!name || !phone) {
-    return <Navigate to={HOME_ROUTE} />;
-  }
-
   return (
-    <div>
-      Thank call
-      {name}
-      {phone}
-    </div>
+    <>
+      <Breadcrumps className="thank__breadcrumps">
+        <BreadcrumpsItem>
+          <span>Спасибо</span>
+        </BreadcrumpsItem>
+      </Breadcrumps>
+      <Thank isContact={true} image={image} titleText="Спасибо за заявку" />
+    </>
   );
 };
 

@@ -1,25 +1,19 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { Navigate } from "react-router";
-import { HOME_ROUTE } from "../routes/routes";
+import Thank from "../components/Thank/Thank";
+import image from "../assets/img/content/thanks-order.png";
+import Breadcrumps from "../components/Breadcrumps/Breadcrumps";
+import BreadcrumpsItem from "../components/Breadcrumps/BreadcrumpsItem";
 
 const ThankOrder = () => {
-  const city = useSelector((state) => state.user.city);
-  const name = useSelector((state) => state.user.name);
-  const phone = useSelector((state) => state.user.phone);
-  const orderPrice = useSelector((state) => state.user.orderPrice);
-
-  if (!name || !phone || !orderPrice) {
-    return <Navigate to={HOME_ROUTE} />;
-  }
   return (
-    <div>
-      THANK Order
-      {name}
-      {phone}
-      {city}
-      {orderPrice}
-    </div>
+    <>
+      <Breadcrumps className="thank__breadcrumps">
+        <BreadcrumpsItem>
+          <span>Спасибо</span>
+        </BreadcrumpsItem>
+      </Breadcrumps>
+      <Thank isContact={false} image={image} titleText="Спасибо за заказ" />
+    </>
   );
 };
 
