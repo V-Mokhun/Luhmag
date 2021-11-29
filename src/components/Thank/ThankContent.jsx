@@ -18,8 +18,8 @@ const ThankContent = ({ isContact, city, name, phone, orderPrice }) => {
           <>
             <li className="thank__item thank__item--location">
               <p>
-                Заказ можно забрать в пункте выдачи заказов: г.{city} ул.
-                Ленинградская, 100
+                Заказ можно забрать в пункте выдачи заказов:
+                <span> г.{city} </span> ул. Ленинградская, 100
               </p>
             </li>
             <li className="thank__item thank__item--summary">

@@ -37,17 +37,18 @@ const ContactForm = ({ className, closeModal, buttonText, ...props }) => {
         dispatch(setName(values.name));
         dispatch(setPhone(values.phone));
 
-        if (closeModal) {
-          closeModal();
-        }
-        navigate(THANK_CONTACT_ROUTE);
-
         resetForm({
           values: {
             name: "",
             phone: "",
           },
         });
+
+        if (closeModal) {
+          closeModal();
+        }
+
+        navigate(THANK_CONTACT_ROUTE);
       }}
     >
       {({ isSubmitting, isValid }) => (

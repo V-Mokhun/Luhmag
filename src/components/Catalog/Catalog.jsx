@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import MyTitle from "../../ui/MyTitle";
 import image from "../../assets/img/content/catalog-1.png";
 import CatalogItem from "./CatalogItem";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../store/cart/cartReducer";
 import MyButton from "../../ui/MyButton";
 import { Link } from "react-router-dom";
 import { CATALOG_ROUTE } from "../../routes/routes";
+import CatalogThankModal from "../../modals/CatalogThankModal/CatalogThankModal";
 
 const PRODUCTS = [
   {
@@ -132,6 +133,9 @@ const PRODUCTS = [
 ];
 
 const Catalog = () => {
+  const productsCount = useSelector((state) => state.cart.productsCount);
+  const totalPrice = useSelector((state) => state.cart.totalPrice);
+  const [thankModal, setThankModal] = useState(false);
   const dispatch = useDispatch();
 
   return (
@@ -179,6 +183,7 @@ const Catalog = () => {
                     })
                   );
                 }}
+                onThank={() => setThankModal(true)}
               />
             );
           })}
@@ -193,6 +198,12 @@ const Catalog = () => {
           </MyButton>
         </div>
       </div>
+      <CatalogThankModal
+        count={productsCount}
+        totalPrice={totalPrice}
+        show={thankModal}
+        close={() => setThankModal(false)}
+      />
     </section>
   );
 };

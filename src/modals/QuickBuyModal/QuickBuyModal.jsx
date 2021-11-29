@@ -19,7 +19,7 @@ const QuickBuyModal = ({ product, close, ...props }) => {
       </p>
       <QuickBuyForm
         className="quick-buy__form"
-        closeModal={() => close()}
+        closeModal={close}
         product={product}
       />
     </Modal>

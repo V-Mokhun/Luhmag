@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import CatalogThankModal from "../../modals/CatalogThankModal/CatalogThankModal";
 import CatalogBuyModal from "../../modals/QuickBuyModal/QuickBuyModal";
 import { PRODUCT_ROUTE } from "../../routes/routes";
 
@@ -15,10 +13,8 @@ const CatalogItem = ({
   oldPrice,
   price,
   onAdd,
+  onThank,
 }) => {
-  const productsCount = useSelector((state) => state.cart.productsCount);
-  const totalPrice = useSelector((state) => state.cart.totalPrice);
-  const [thankModal, setThankModal] = useState(false);
   const [buyModal, setBuyModal] = useState(false);
 
   return (
@@ -66,19 +62,13 @@ const CatalogItem = ({
             type="button"
             onClick={() => {
               onAdd();
-              setThankModal(true);
+              onThank();
             }}
           >
             В корзину
           </button>
         </div>
       </li>
-      <CatalogThankModal
-        count={productsCount}
-        totalPrice={totalPrice}
-        show={thankModal}
-        close={() => setThankModal(false)}
-      />
       <CatalogBuyModal
         show={buyModal}
         close={() => setBuyModal(false)}

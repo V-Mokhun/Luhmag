@@ -2,6 +2,9 @@
   &__wave-top,
   &__wave-bottom {
     position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
     left: 0;
     width: 100%;
     overflow: hidden;

@@ -4,18 +4,24 @@
 @import "font";
 @import "global";
 
-// Стили блоков сайта
-@import "../components/Header/header";
-@import "../components/Menu/menu";
+// Стили компонентов
 @import "../components/Consultation/consultation";
 @import "../components/Waves/waves";
 @import "../components/Breadcrumps/breadcrumps";
+@import "../components/Slider/slider";
+
+// --------------------------------------------------
+// Стили блоков сайта
+@import "../components/Header/header";
+@import "../components/Menu/menu";
 @import "../components/Intro/intro";
 @import "../components/ConsultationButton/consultation-button";
 @import "../components/About/about";
 @import "../components/Catalog/catalog";
 @import "../components/Benefits/benefits";
 @import "../components/Steps/steps";
+@import "../components/Reviews/reviews";
+@import "../components/News/news";
 @import "../components/Thank/thank";
 @import "../components/NotFound/not-found";
 @import "../components/Footer/footer";

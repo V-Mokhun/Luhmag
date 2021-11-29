@@ -45,11 +45,6 @@ const QuickBuyForm = ({ className, closeModal, product, ...props }) => {
         dispatch(setPhone(values.phone));
         dispatch(setOrderPrice(values.totalPrice));
 
-        if (closeModal) {
-          closeModal();
-        }
-        navigate(THANK_ORDER_ROUTE);
-
         resetForm({
           values: {
             name: "",
@@ -58,6 +53,9 @@ const QuickBuyForm = ({ className, closeModal, product, ...props }) => {
             totalPrice: price,
           },
         });
+
+        closeModal();
+        navigate(THANK_ORDER_ROUTE);
       }}
     >
       {({ isSubmitting, isValid, values, setValues }) => (
