@@ -188,7 +188,7 @@
   padding: 50px 0;
 
   @media (max-width: $md2) {
-    padding: 0px 0px 60px 0px;
+    padding: 0px 0px 30px 0px;
     background: transparent;
   }
 
@@ -247,6 +247,7 @@
 
   &__image {
     margin: 0px 20px 0px -75px;
+    filter: drop-shadow(50px 50px 50px rgba(0, 0, 0, 0.1));
 
     img {
       height: auto;
@@ -297,3 +298,78 @@
 }
 
 // --------------------------------------------------
+.question-consultation {
+  padding: 50px 0;
+
+  @media (max-width: $md2) {
+    padding: 0px 0px 60px 0px;
+    background: transparent;
+  }
+
+  @media (max-width: $md3) {
+    background: transparent;
+  }
+
+  .consultation__image {
+    margin: 0px 0px -40px 0px;
+    filter: drop-shadow(-50px 50px 200px rgba(0, 0, 0, 0.4));
+
+    @media (max-width: 1700px) {
+      margin: 0px 0px -30px 0px;
+    }
+
+    @media (max-width: $md2) {
+      margin: 0;
+    }
+  }
+
+  &__description {
+    position: relative;
+    padding: 0px 0px 0px 85px;
+
+    @media (max-width: $md1) {
+      padding: 0px 0px 0px 60px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 10px 5px 30px rgba($black, 0.05);
+      background: $white url("../../assets/img/icons/headphones.svg") center
+        center/30px 28px no-repeat;
+      transform: translateY(-50%);
+
+      @media (max-width: $md1) {
+        width: 45px;
+        height: 45px;
+        background: $white url("../../assets/img/icons/headphones.svg") center
+          center/22px 20px no-repeat;
+      }
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .consultation__mobile-form {
+    .form__item {
+      margin: 0px 0px 40px 0px;
+    }
+
+    .form__button-wrapper {
+      text-align: center;
+    }
+
+    .form__button {
+      @media (max-width: $md4) {
+        padding: 15px 30px;
+      }
+    }
+  }
+}
