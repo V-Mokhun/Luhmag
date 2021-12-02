@@ -1,0 +1,128 @@
+.questions {
+  padding: 35px 0 50px;
+
+  @media (max-width: $md2) {
+    padding-bottom: 30px;
+  }
+
+  @media (max-width: $md3) {
+    padding-bottom: 15px;
+  }
+
+  @media (max-width: $md4) {
+    padding-bottom: 0;
+  }
+
+  &__container {
+    max-width: 910px;
+  }
+
+  &__title {
+    margin: 0px 0px 40px 0px;
+
+    span {
+      font-weight: 300;
+    }
+
+    @media (max-width: $md2) {
+      margin: 0px 0px 35px 0px;
+    }
+
+    @media (max-width: $md3) {
+      margin: 0px 0px 30px 0px;
+    }
+
+    @media (max-width: $md4) {
+      font-size: 28px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    counter-reset: item;
+  }
+
+  &__item {
+    counter-increment: item;
+    flex: 1 1 100%;
+    margin: 0px 0px 30px 0px;
+    border-bottom: 1px solid #b9b9b9;
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+    &:hover,
+    &:focus {
+      .questions__question {
+        color: $secondaryColor;
+      }
+    }
+
+    @media (min-width: $md3) {
+      padding: 0px 0px 0px 50px;
+      &:nth-child(n + 10) .questions__question::before {
+        content: counter(item);
+      }
+    }
+
+    &.active {
+      box-shadow: 10px 20px 45px rgba(0, 0, 0, 0.05);
+      border: 0;
+      border-radius: 10px;
+      padding: 30px 30px 30px 50px;
+      background: $white;
+
+      .questions__description {
+        opacity: 1;
+        height: 100%;
+        max-height: 100%;
+      }
+
+      @media (max-width: $md3) {
+        padding: 20px;
+      }
+    }
+  }
+
+  &__question {
+    margin: 0px 0px 30px 0px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    transition: color 0.3s linear;
+
+    @media (min-width: $md3) {
+      position: relative;
+
+      &::before {
+        content: "0" counter(item);
+        position: absolute;
+        top: 0;
+        left: -35px;
+        font-size: 16px;
+        line-height: 160%;
+        color: #b9b9b9;
+      }
+    }
+
+    @media (max-width: $md3) {
+      margin: 0px 0px 25px 0px;
+      font-size: 18px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    height: 0px;
+    max-height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+    line-height: 160%;
+
+    @media (max-width: $md3) {
+      font-size: 14px;
+    }
+  }
+}
