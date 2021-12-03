@@ -6,6 +6,7 @@ import ConsultationChoice from "../components/Consultation/ConsultationChoice/Co
 import ConsultationDecide from "../components/Consultation/ConsultationDecide/ConsultationDecide";
 import ConsultationQuestion from "../components/Consultation/ConsultationQuestion/ConsultationQuestion";
 import ConsultationButton from "../components/ConsultationButton/ConsultationButton";
+import Contacts from "../components/Contacts/Contacts";
 import Delivery from "../components/Delivery/Delivery";
 import Intro from "../components/Intro/Intro";
 import News from "../components/News/News";
@@ -29,6 +30,7 @@ const Home = () => {
       <ConsultationDecide />
       <Questions />
       <ConsultationQuestion />
+      <Contacts />
     </>
   );
 };
