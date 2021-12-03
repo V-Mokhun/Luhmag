@@ -1,17 +1,17 @@
-// Сюда импортировать все стили scss
+// global
 @import "variables";
 @import "mixins";
 @import "font";
 @import "global";
 
-// Стили компонентов
+// general
 @import "../components/Consultation/consultation";
 @import "../components/Waves/waves";
 @import "../components/Breadcrumps/breadcrumps";
 @import "../components/Slider/slider";
 
 // --------------------------------------------------
-// Стили блоков сайта
+// Components
 @import "../components/Header/header";
 @import "../components/Menu/menu";
 @import "../components/Intro/intro";
@@ -29,3 +29,6 @@
 @import "../components/NotFound/not-found";
 @import "../components/Footer/footer";
 @import "../modals/modal";
+
+// pages
+@import "../components/Delivery/DeliveryPage/delivery-page";

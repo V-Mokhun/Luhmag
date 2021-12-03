@@ -1,14 +1,17 @@
 import React from "react";
-import About from "../pages/About";
+import AboutPage from "../pages/AboutPage";
 import Cart from "../pages/Cart";
-import Catalog from "../pages/Catalog";
-import Contacts from "../pages/Contacts";
-import Delivery from "../pages/Delivery";
-import News from "../pages/News";
+import CatalogPage from "../pages/CatalogPage";
+import ContactsPage from "../pages/ContactsPage";
+import DeliveryPage from "../pages/DeliveryPage";
+import NewsPage from "../pages/NewsPage";
 import NewsItem from "../pages/NewsItem";
-import Sales from "../pages/Sales";
+import SalesPage from "../pages/SalesPage";
 import SalesItem from "../pages/SalesItem";
 import Home from "../pages/Home";
+import ProductPage from "../pages/ProductPage";
+import ThankContact from "../pages/ThankContact";
+import ThankOrder from "../pages/ThankOrder";
 import {
   ABOUT_ROUTE,
   CART_ROUTE,
@@ -24,9 +27,6 @@ import {
   THANK_CONTACT_ROUTE,
   THANK_ORDER_ROUTE,
 } from "./routes";
-import Product from "../pages/Product";
-import ThankContact from "../pages/ThankContact";
-import ThankOrder from "../pages/ThankOrder";
 
 export const routes = [
   {
@@ -35,15 +35,15 @@ export const routes = [
   },
   {
     path: CATALOG_ROUTE,
-    Component: <Catalog />,
+    Component: <CatalogPage />,
   },
   {
     path: PRODUCT_ITEM_ROUTE,
-    Component: <Product />,
+    Component: <ProductPage />,
   },
   {
     path: ABOUT_ROUTE,
-    Component: <About />,
+    Component: <AboutPage />,
   },
   {
     path: CART_ROUTE,
@@ -51,15 +51,15 @@ export const routes = [
   },
   {
     path: CONTACTS_ROUTE,
-    Component: <Contacts />,
+    Component: <ContactsPage />,
   },
   {
     path: DELIVERY_ROUTE,
-    Component: <Delivery />,
+    Component: <DeliveryPage />,
   },
   {
     path: NEWS_ROUTE,
-    Component: <News />,
+    Component: <NewsPage />,
   },
   {
     path: NEWS_ITEM_ROUTE,
@@ -67,7 +67,7 @@ export const routes = [
   },
   {
     path: SALES_ROUTE,
-    Component: <Sales />,
+    Component: <SalesPage />,
   },
   {
     path: SALES_ITEM_ROUTE,
