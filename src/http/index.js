@@ -27,6 +27,11 @@ export const appApi = {
       return resp.data;
     });
   },
+  getOneSale(id) {
+    return $host.get(`sales/${id}`).then((resp) => {
+      return resp.data;
+    });
+  },
   getWorkers() {
     return $host.get("workers").then((resp) => {
       return resp.data;

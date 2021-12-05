@@ -21,6 +21,11 @@ export const fetchSales = createAsyncThunk(`app/sales`, async () => {
   return response;
 });
 
+export const fetchOneSale = createAsyncThunk(`app/one-sale`, async (saleId) => {
+  const response = await appApi.getOneSale(saleId);
+  return response;
+});
+
 export const fetchWorkers = createAsyncThunk(`app/workers`, async () => {
   const response = await appApi.getWorkers();
   return response;

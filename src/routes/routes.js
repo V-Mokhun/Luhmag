@@ -9,6 +9,6 @@ export const DELIVERY_ROUTE = "/delivery";
 export const NEWS_ROUTE = "/news";
 export const ONE_NEWS_ROUTE = "/news/:id";
 export const SALES_ROUTE = "/sales";
-export const SALES_ITEM_ROUTE = "/sales/:id";
+export const ONE_SALE_ROUTE = "/sales/:id";
 export const THANK_ORDER_ROUTE = "/thank-order";
 export const THANK_CONTACT_ROUTE = "/thank-contact";

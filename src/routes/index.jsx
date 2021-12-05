@@ -7,7 +7,7 @@ import DeliveryPage from "../pages/DeliveryPage";
 import NewsPage from "../pages/NewsPage";
 import OneNewsPage from "../pages/OneNewsPage";
 import SalesPage from "../pages/SalesPage";
-import SalesItem from "../pages/SalesItem";
+import OneSalePage from "../pages/OneSalePage";
 import Home from "../pages/Home";
 import ProductPage from "../pages/ProductPage";
 import ThankContact from "../pages/ThankContact";
@@ -22,10 +22,10 @@ import {
   ONE_NEWS_ROUTE,
   NEWS_ROUTE,
   PRODUCT_ITEM_ROUTE,
-  SALES_ITEM_ROUTE,
   SALES_ROUTE,
   THANK_CONTACT_ROUTE,
   THANK_ORDER_ROUTE,
+  ONE_SALE_ROUTE,
 } from "./routes";
 
 export const routes = [
@@ -70,8 +70,8 @@ export const routes = [
     Component: <SalesPage />,
   },
   {
-    path: SALES_ITEM_ROUTE,
-    Component: <SalesItem />,
+    path: ONE_SALE_ROUTE,
+    Component: <OneSalePage />,
   },
   {
     path: THANK_CONTACT_ROUTE,
