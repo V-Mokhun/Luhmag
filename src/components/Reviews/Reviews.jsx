@@ -13,6 +13,8 @@ const Reviews = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if (reviews.length > 0) return;
+
     dispatch(fetchReviews());
   }, []);
 

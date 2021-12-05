@@ -6,6 +6,11 @@ export const fetchNews = createAsyncThunk(`app/news`, async () => {
   return response;
 });
 
+export const fetchOneNews = createAsyncThunk(`api/one-news`, async (newsId) => {
+  const response = await appApi.getOneNews(newsId);
+  return response;
+});
+
 export const fetchReviews = createAsyncThunk(`app/reviews`, async () => {
   const response = await appApi.getReviews();
   return response;

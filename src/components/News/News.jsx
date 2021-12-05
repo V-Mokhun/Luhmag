@@ -9,11 +9,12 @@ import { useDispatch } from "react-redux";
 import { fetchNews } from "../../store/app/thunks";
 import { useSelector } from "react-redux";
 
-const News = () => {
+const News = ({ activePageId }) => {
   const news = useSelector((state) => state.app.news);
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if (news.length > 0) return;
     dispatch(fetchNews());
   }, []);
 
@@ -27,17 +28,21 @@ const News = () => {
         <div className="news__inner">
           <Slider>
             {news.length > 0 &&
-              news.map((item) => (
-                <SwiperSlide key={item.id}>
-                  <NewsItem
-                    image={image}
-                    date={item.date}
-                    title={item.title}
-                    description={item.description}
-                    id={item.id}
-                  />
-                </SwiperSlide>
-              ))}
+              news.map((item) => {
+                if (item.id == activePageId) return;
+
+                return (
+                  <SwiperSlide key={item.id}>
+                    <NewsItem
+                      image={image}
+                      date={item.date}
+                      title={item.title}
+                      description={item.description}
+                      id={item.id}
+                    />
+                  </SwiperSlide>
+                );
+              })}
           </Slider>
         </div>
       </div>

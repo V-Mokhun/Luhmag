@@ -20,7 +20,7 @@ const News = () => {
     <section className="news-page">
       <Breadcrumps className="news-page__breadcrumps">
         <BreadcrumpsItem>
-          <span>Доставка и оплата</span>
+          <span>Новости</span>
         </BreadcrumpsItem>
       </Breadcrumps>
       <div className="news-page__content">

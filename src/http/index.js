@@ -12,6 +12,11 @@ export const appApi = {
       return resp.data;
     });
   },
+  getOneNews(id) {
+    return $host.get(`news/${id}`).then((resp) => {
+      return resp.data;
+    });
+  },
   getReviews() {
     return $host.get("reviews").then((resp) => {
       return resp.data;
