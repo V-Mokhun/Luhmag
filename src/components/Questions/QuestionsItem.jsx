@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const QuestionsItem = ({ question, description }) => {
-  const [active, setActive] = useState(false);
+const QuestionsItem = ({ question, description, isActiveAtStart }) => {
+  const [active, setActive] = useState(isActiveAtStart);
 
   return (
     <li

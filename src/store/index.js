@@ -11,10 +11,12 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import appReducer from "./app/appReducer";
 import cartReducer from "./cart/cartReducer";
 import userReducer from "./user/userReducer";
 
 const reducers = combineReducers({
+  app: appReducer,
   cart: cartReducer,
   user: userReducer,
 });

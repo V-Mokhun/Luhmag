@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { NEWS_ROUTE } from "../../routes/routes";
 import MyButton from "../../ui/MyButton";
 
-const NewsItem = ({ image, date, title, description, id }) => {
+const NewsItem = ({ image, date, title, description, id, className }) => {
   return (
-    <div className="news__item item-news">
+    <div className={`news__item item-news ${className ? className : ""}`}>
       <Link
         to={`${NEWS_ROUTE}/${id}`}
         className="item-news__image"

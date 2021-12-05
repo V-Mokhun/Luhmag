@@ -39,12 +39,16 @@
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     border-radius: 10px;
     box-shadow: 10px 10px 15px rgba($black, 0.05);
     background: $white;
   }
 }
 
+// --------------------------------------------------
 .item-news {
   &__image {
     display: block;
@@ -59,6 +63,7 @@
   }
 
   &__content {
+    flex: 1 1 auto;
     padding: 25px;
 
     @media (max-width: $md3) {
@@ -94,7 +99,23 @@
   }
 
   &__description {
+    position: relative;
     line-height: 160%;
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: linear-gradient(0deg, #fff 15%, #fff0);
+      pointer-events: none;
+      user-select: none;
+    }
 
     @media (max-width: $md3) {
       font-size: 14px;
@@ -105,5 +126,65 @@
     border-radius: 10px 10px 0px 0px;
     width: 100%;
     text-align: center;
+  }
+}
+
+// --------------------------------------------------
+.news-page {
+  &__content {
+    padding: 0px 0px 100px 0px;
+
+    @media (max-width: $md2) {
+      padding: 0px 0px 70px 0px;
+    }
+
+    @media (max-width: $md3) {
+      padding: 40px 0;
+    }
+
+    @media (max-width: $md4) {
+      padding: 30px 0;
+    }
+  }
+
+  &__title {
+    margin: 0px 0px 40px 0px;
+
+    @media (max-width: $md2) {
+      margin: 0px 0px 35px 0px;
+    }
+
+    @media (max-width: $md3) {
+      margin: 0px 0px 30px 0px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media (max-width: $md2) {
+      gap: 25px;
+    }
+
+    @media (max-width: 600px) {
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    flex: 0 1 calc(33.333% - 30px);
+    height: auto;
+
+    @media (max-width: $md2) {
+      flex: 0 1 calc(50% - 25px);
+    }
+
+    @media (max-width: 600px) {
+      flex: 1 1 100%;
+    }
   }
 }

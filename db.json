@@ -1,0 +1,156 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "date": "14.04.2020",
+      "title": "Новое поступление: слуховой аппарат Axon V-163",
+      "description": "Усилители слуха, производимые китайской компанией Axon, имеют повышенный спрос среди людей, имеющих проблемы со слухом. Под брендом Axon производятся различные модели аппаратов для усиления слуха – внутриушные, внутриканальные, заушные. Благодаря большому разнообразию цифровых и аналоговых моделей, каждый сможет подобрать для себя нужный вариант.",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem animi facilis assumenda doloremque est! Ratione quaerat suscipit blanditiis similique corporis dolorum quos exercitationem unde! Maiores, quis dignissimos quia repellendus omnis ullam. Numquam vel rem, enim nihil molestias rerum repellendus impedit ipsa officia soluta, unde quis aliquam voluptates odio quia vitae?"
+    },
+    {
+      "id": 2,
+      "date": "24.03.2020",
+      "title": "Смена адреса пункта выдачи заказов в Красноярске",
+      "description": "Уважаемые покупатели, с 01.04.20 пункт выдачи в городе Красноярске будет находиться по адресу: ул. Белинского,1.",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem animi facilis assumenda doloremque est! Ratione quaerat suscipit blanditiis similique corporis dolorum quos exercitationem unde! Maiores, quis dignissimos quia repellendus omnis ullam. Numquam vel rem, enim nihil molestias rerum repellendus impedit ipsa officia soluta, unde quis aliquam voluptates odio quia vitae?"
+    },
+    {
+      "id": 3,
+      "date": "02.03.2020",
+      "title": "Режим работы магазинов 8-го марта",
+      "description": "Уважаемые женщины коллектив магазина Sluhmag, от всей души поздравляет Вас с международным женским днем! Желаем всего самого наилучшего, счастья, здоровья, любви и женского счастья!",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem animi facilis assumenda doloremque est! Ratione quaerat suscipit blanditiis similique corporis dolorum quos exercitationem unde! Maiores, quis dignissimos quia repellendus omnis ullam. Numquam vel rem, enim nihil molestias rerum repellendus impedit ipsa officia soluta, unde quis aliquam voluptates odio quia vitae?"
+    },
+    {
+      "id": 4,
+      "date": "14.04.2020",
+      "title": "Новое поступление: слуховой аппарат Axon V-163",
+      "description": "Усилители слуха, производимые китайской компанией Axon, имеют повышенный спрос среди людей, имеющих проблемы со слухом. Под брендом Axon производятся различные модели аппаратов для усиления слуха – внутриушные, внутриканальные, заушные. Благодаря большому разнообразию цифровых и аналоговых моделей, каждый сможет подобрать для себя нужный вариант.",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem animi facilis assumenda doloremque est! Ratione quaerat suscipit blanditiis similique corporis dolorum quos exercitationem unde! Maiores, quis dignissimos quia repellendus omnis ullam. Numquam vel rem, enim nihil molestias rerum repellendus impedit ipsa officia soluta, unde quis aliquam voluptates odio quia vitae?"
+    },
+    {
+      "id": 5,
+      "date": "24.03.2020",
+      "title": "Смена адреса пункта выдачи заказов в Красноярске",
+      "description": "Уважаемые покупатели, с 01.04.20 пункт выдачи в городе Красноярске будет находиться по адресу: ул. Белинского,1.",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem animi facilis assumenda doloremque est! Ratione quaerat suscipit blanditiis similique corporis dolorum quos exercitationem unde! Maiores, quis dignissimos quia repellendus omnis ullam. Numquam vel rem, enim nihil molestias rerum repellendus impedit ipsa officia soluta, unde quis aliquam voluptates odio quia vitae?"
+    },
+    {
+      "id": 6,
+      "date": "02.03.2020",
+      "title": "Режим работы магазинов 8-го марта",
+      "description": "Уважаемые женщины коллектив магазина Sluhmag, от всей души поздравляет Вас с международным женским днем! Желаем всего самого наилучшего, счастья, здоровья, любви и женского счастья!",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem animi facilis assumenda doloremque est! Ratione quaerat suscipit blanditiis similique corporis dolorum quos exercitationem unde! Maiores, quis dignissimos quia repellendus omnis ullam. Numquam vel rem, enim nihil molestias rerum repellendus impedit ipsa officia soluta, unde quis aliquam voluptates odio quia vitae?"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Кирилл Вершинский",
+      "device": "Слуховой аппарат XM-900A",
+      "description": "Стоит копейки по сравнению с другими слуховыми аппаратами, покупал без особой надежды. Стоит копейки по сравнению с другими слуховыми аппаратами, покупал без особой надежды. Ну не сможет улучшить слух или не будет работать – не жалко потраченных денег. А слуховой аппарат, то работает! Большое спасибо!"
+    },
+    {
+      "id": 2,
+      "name": "Светлана Винниченко",
+      "device": "Слуховой аппарат EM G-30",
+      "description": "Рада, что приобрела у вас в магазине, очень удачная цена на этот слуховой аппарат!"
+    },
+    {
+      "id": 3,
+      "name": "Денис Леонтьев",
+      "device": "Слуховой аппарат Axon K-188",
+      "description": "С недавнего времени использую слуховой аппарат для улучшения слышимости. Долго сопротивлялся, но возраст берет свое. Аппаратом доволен, спасибо вашему магазину!"
+    },
+    {
+      "id": 4,
+      "name": "Кирилл Вершинский",
+      "device": "Слуховой аппарат XM-900A",
+      "description": "Стоит копейки по сравнению с другими слуховыми аппаратами, покупал без особой надежды. Стоит копейки по сравнению с другими слуховыми аппаратами, покупал без особой надежды. Ну не сможет улучшить слух или не будет работать – не жалко потраченных денег. А слуховой аппарат, то работает! Большое спасибо!"
+    },
+    {
+      "id": 5,
+      "name": "Светлана Винниченко",
+      "device": "Слуховой аппарат EM G-30",
+      "description": "Рада, что приобрела у вас в магазине, очень удачная цена на этот слуховой аппарат!"
+    },
+    {
+      "id": 6,
+      "name": "Денис Леонтьев",
+      "device": "Слуховой аппарат Axon K-188",
+      "description": "С недавнего времени использую слуховой аппарат для улучшения слышимости. Долго сопротивлялся, но возраст берет свое. Аппаратом доволен, спасибо вашему магазину!"
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "isEnd": false,
+      "date": "26.04.2020",
+      "endsAt": "08.12.2021",
+      "title": "Товар месяца – Слуховой аппарат EM G-30",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem animi facilis assumenda doloremque est! Ratione quaerat suscipit blanditiis similique corporis dolorum quos exercitationem unde! Maiores, quis dignissimos quia repellendus omnis ullam. Numquam vel rem, enim nihil molestias rerum repellendus impedit ipsa officia soluta, unde quis aliquam voluptates odio quia vitae?"
+    },
+    {
+      "id": 2,
+      "isEnd": true,
+      "date": "6.04.2020",
+      "endsAt": "19.04.2021",
+      "title": "«Мелочь, а приятно!»",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem animi facilis assumenda doloremque est! Ratione quaerat suscipit blanditiis similique corporis dolorum quos exercitationem unde! Maiores, quis dignissimos quia repellendus omnis ullam. Numquam vel rem, enim nihil molestias rerum repellendus impedit ipsa officia soluta, unde quis aliquam voluptates odio quia vitae?"
+    },
+    {
+      "id": 3,
+      "isEnd": true,
+      "date": "01.03.2020",
+      "endsAt": "07.03.2020",
+      "title": "«Минус 25% на все товары!»",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem animi facilis assumenda doloremque est! Ratione quaerat suscipit blanditiis similique corporis dolorum quos exercitationem unde! Maiores, quis dignissimos quia repellendus omnis ullam. Numquam vel rem, enim nihil molestias rerum repellendus impedit ipsa officia soluta, unde quis aliquam voluptates odio quia vitae?"
+    },
+    {
+      "id": 4,
+      "isEnd": true,
+      "date": "01.02.2020",
+      "endsAt": "16.02.2020",
+      "title": "Скидки на слуховые аппараты Zinbest",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem animi facilis assumenda doloremque est! Ratione quaerat suscipit blanditiis similique corporis dolorum quos exercitationem unde! Maiores, quis dignissimos quia repellendus omnis ullam. Numquam vel rem, enim nihil molestias rerum repellendus impedit ipsa officia soluta, unde quis aliquam voluptates odio quia vitae?"
+    },
+    {
+      "id": 5,
+      "isEnd": true,
+      "date": "11.11.2019",
+      "endsAt": "29.11.19",
+      "title": "«Черная пятница» 29.11.19",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem animi facilis assumenda doloremque est! Ratione quaerat suscipit blanditiis similique corporis dolorum quos exercitationem unde! Maiores, quis dignissimos quia repellendus omnis ullam. Numquam vel rem, enim nihil molestias rerum repellendus impedit ipsa officia soluta, unde quis aliquam voluptates odio quia vitae?"
+    },
+    {
+      "id": 6,
+      "isEnd": true,
+      "date": "23.08.2019",
+      "endsAt": "26.10.2019",
+      "title": "Бесплатная курьерская доставка",
+      "fullDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem animi facilis assumenda doloremque est! Ratione quaerat suscipit blanditiis similique corporis dolorum quos exercitationem unde! Maiores, quis dignissimos quia repellendus omnis ullam. Numquam vel rem, enim nihil molestias rerum repellendus impedit ipsa officia soluta, unde quis aliquam voluptates odio quia vitae?"
+    }
+  ],
+  "workers": [
+    {
+      "name": "Ольга Новикова",
+      "position": "Руководитель отдела продаж",
+      "email": "novikova@sluhmag.ru"
+    },
+    {
+      "name": "Валерий Ефимов",
+      "position": "Менеджер по работе с клиентами",
+      "email": "efimov@sluhmag.ru"
+    },
+    {
+      "name": "Виктория Лебедь",
+      "position": "Менеджер по работе с клиентами",
+      "email": "lebed@sluhmag.ru"
+    },
+    {
+      "name": "Кирилл Шпаков",
+      "position": "Менеджер по оптовым продажам",
+      "email": "shpakov@sluhmag.ru"
+    }
+  ]
+}

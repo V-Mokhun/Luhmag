@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MyTitle from "../../ui/MyTitle";
 import Slider from "../Slider/Slider";
 import NewsItem from "./NewsItem";
 import image from "../../assets/img/content/news-1.jpg";
 import Waves from "../Waves/Waves";
 import { SwiperSlide } from "swiper/react/swiper-react";
+import { useDispatch } from "react-redux";
+import { fetchNews } from "../../store/app/thunks";
+import { useSelector } from "react-redux";
 
 const News = () => {
+  const news = useSelector((state) => state.app.news);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchNews());
+  }, []);
+
   return (
     <section className="news">
       <Waves className="news__waves" />
@@ -16,72 +26,18 @@ const News = () => {
         </MyTitle>
         <div className="news__inner">
           <Slider>
-            <SwiperSlide>
-              <NewsItem
-                image={image}
-                date={"12.12.2019"}
-                title={"Режим работы магазинов в Новогодние праздники!"}
-                description={
-                  "Уважаемые покупатели магазина bez-signala, от всей души поздравляем Вас с наступающим 2020 годом!"
-                }
-                id="1"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <NewsItem
-                image={image}
-                date={"12.12.2019"}
-                title={"Режим работы магазинов в Новогодние праздники!"}
-                description={
-                  "Уважаемые покупатели магазина bez-signala, от всей души поздравляем Вас с наступающим 2020 годом!"
-                }
-                id="2"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <NewsItem
-                image={image}
-                date={"12.12.2019"}
-                title={"Режим работы магазинов в Новогодние праздники!"}
-                description={
-                  "Уважаемые покупатели магазина bez-signala, от всей души поздравляем Вас с наступающим 2020 годом!"
-                }
-                id="3"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <NewsItem
-                image={image}
-                date={"12.12.2019"}
-                title={"Режим работы магазинов в Новогодние праздники!"}
-                description={
-                  "Уважаемые покупатели магазина bez-signala, от всей души поздравляем Вас с наступающим 2020 годом!"
-                }
-                id="4"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <NewsItem
-                image={image}
-                date={"12.12.2019"}
-                title={"Режим работы магазинов в Новогодние праздники!"}
-                description={
-                  "Уважаемые покупатели магазина bez-signala, от всей души поздравляем Вас с наступающим 2020 годом!"
-                }
-                id="5"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <NewsItem
-                image={image}
-                date={"12.12.2019"}
-                title={"Режим работы магазинов в Новогодние праздники!"}
-                description={
-                  "Уважаемые покупатели магазина bez-signala, от всей души поздравляем Вас с наступающим 2020 годом!"
-                }
-                id="6"
-              />
-            </SwiperSlide>
+            {news.length > 0 &&
+              news.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <NewsItem
+                    image={image}
+                    date={item.date}
+                    title={item.title}
+                    description={item.description}
+                    id={item.id}
+                  />
+                </SwiperSlide>
+              ))}
           </Slider>
         </div>
       </div>

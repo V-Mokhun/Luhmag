@@ -103,8 +103,9 @@ const Questions = () => {
           Часто задаваемые вопросы <span>при выборе слухового аппарата</span>
         </MyTitle>
         <ul className="questions__list">
-          {questionsArray.map((q) => (
+          {questionsArray.map((q, i) => (
             <QuestionsItem
+              isActiveAtStart={i === 0}
               key={q.question}
               question={q.question}
               description={q.description}
