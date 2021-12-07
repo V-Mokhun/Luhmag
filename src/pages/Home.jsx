@@ -1,5 +1,4 @@
 import React from "react";
-import About from "../components/About/About";
 import Benefits from "../components/Benefits/Benefits";
 import Catalog from "../components/Catalog/Catalog";
 import ConsultationChoice from "../components/Consultation/ConsultationChoice/ConsultationChoice";
@@ -13,12 +12,13 @@ import News from "../components/News/News";
 import Questions from "../components/Questions/Questions";
 import Reviews from "../components/Reviews/Reviews";
 import Steps from "../components/Steps/Steps";
+import Types from "../components/Types/Types";
 
 const Home = () => {
   return (
     <>
       <Intro />
-      <About />
+      <Types />
       <ConsultationButton />
       <Catalog />
       <ConsultationChoice />

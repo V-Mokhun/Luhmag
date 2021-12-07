@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { appApi } from "../../http";
+import { appApi } from "../../api";
 
 export const fetchNews = createAsyncThunk(`app/news`, async () => {
   const response = await appApi.getNews();
