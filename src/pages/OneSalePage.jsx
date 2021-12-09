@@ -27,7 +27,7 @@ const OneSalePage = () => {
       <div className="one-sale__content">
         <div className="container">
           <div className="one-sale__item">
-            {oneSale.id && (
+            {oneSale?.id && (
               <>
                 <MyTitle Component="h1" className="one-sale__title">
                   {oneSale.title}

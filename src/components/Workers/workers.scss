@@ -1,0 +1,112 @@
+.workers {
+  position: relative;
+  padding: 80px 0;
+  background: #f7f7f7;
+
+  @media (max-width: $md2) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: $md3) {
+    padding: 50px 0;
+  }
+
+  @media (max-width: $md4) {
+    padding: 40px 0;
+  }
+
+  &__title {
+    margin: 0px 0px 50px 0px;
+
+    @media (max-width: $md2) {
+      margin: 0px 0px 45px 0px;
+    }
+
+    @media (max-width: $md3) {
+      margin: 0px 0px 40px 0px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    @media (max-width: $md2) {
+      gap: 25px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 calc(25% - 30px);
+    text-align: center;
+
+    @media (max-width: $md2) {
+      flex: 0 1 calc(50% - 25px);
+    }
+
+    @media (max-width:600px){
+      flex: 1 1 100%;
+    }
+  }
+}
+
+// --------------------------------------------------
+.item-workers {
+  &__image {
+    margin: 0px 0px 20px 0px;
+
+    img {
+      border-radius: 50%;
+      height: auto;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    margin: 0px 0px 5px 0px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: $titleColor;
+  }
+
+  &__position {
+    margin: 0px 0px 6px 0px;
+    flex: 1 1 auto;
+    line-height: 160%;
+  }
+
+  &__link-wrapper {
+    text-align: center;
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    line-height: 160%;
+    color: $secondaryColor;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 20px;
+      height: 14px;
+      background: url("../../assets/img/icons/email.svg") 0 0/20px 14px
+        no-repeat;
+      transform: translateY(-50%);
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

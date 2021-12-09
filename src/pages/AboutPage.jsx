@@ -2,6 +2,8 @@ import React from "react";
 import Breadcrumps from "../components/Breadcrumps/Breadcrumps";
 import BreadcrumpsItem from "../components/Breadcrumps/BreadcrumpsItem";
 import About from "../components/About/About";
+import Workers from "../components/Workers/Workers";
+import Requisites from "../components/Requisites/Requisites";
 
 const AboutPage = () => {
   return (
@@ -12,6 +14,8 @@ const AboutPage = () => {
         </BreadcrumpsItem>
       </Breadcrumps>
       <About />
+      <Workers />
+      <Requisites />
     </section>
   );
 };

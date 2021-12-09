@@ -26,7 +26,7 @@ const NewsItem = () => {
       <div className="one-news__content">
         <div className="container">
           <div className="one-news__item">
-            {oneNews.id && (
+            {oneNews?.id && (
               <>
                 <MyTitle Component="h1" className="one-news__title">
                   {oneNews.title}
