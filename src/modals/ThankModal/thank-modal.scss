@@ -1,0 +1,26 @@
+.thank-modal {
+  .modal__inner {
+    &::after {
+      background: $white url("../../assets/img/icons/check-big.svg") center
+        center/40px 40px no-repeat;
+
+      @media (max-width: $md3) {
+        background: $white url("../../assets/img/icons/check-big.svg") center
+          center/30px 30px no-repeat;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0px 0px 15px 0px;
+  }
+
+  &__text {
+    text-align: center;
+    line-height: 160%;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}

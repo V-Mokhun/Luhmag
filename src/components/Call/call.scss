@@ -9,6 +9,12 @@
     background: $secondaryColor;
   }
 
+  &__wave.waves__wave-top {
+    .waves__shape-fill {
+      fill: #f7f7f7;
+    }
+  }
+
   &__inner {
     color: $white;
   }

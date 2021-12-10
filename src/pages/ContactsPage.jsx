@@ -1,8 +1,10 @@
 import React from "react";
 import Breadcrumps from "../components/Breadcrumps/Breadcrumps";
 import BreadcrumpsItem from "../components/Breadcrumps/BreadcrumpsItem";
-import ContactCall from "../components/Call/ContactCall";
+import ContactsCall from "../components/Call/ContactsCall";
 import Contacts from "../components/Contacts/Contacts";
+import ContactsAbout from "../components/ContactsAbout/ContactsAbout";
+import Feedback from "../components/Feedback/Feedback";
 
 const ContactsPage = () => {
   return (
@@ -12,7 +14,9 @@ const ContactsPage = () => {
           <span>Контакты</span>
         </BreadcrumpsItem>
       </Breadcrumps>
-      <ContactCall />
+      <ContactsAbout />
+      <ContactsCall />
+      <Feedback />
       <Contacts />
     </section>
   );
