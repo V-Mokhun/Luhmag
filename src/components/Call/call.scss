@@ -1,0 +1,99 @@
+.call {
+  position: relative;
+  padding: 80px 0;
+  background: $secondaryColor url("../../assets/img/content/call-bg.png") center
+    center/100% 100% no-repeat;
+
+  @media (max-width: $md3) {
+    padding: 60px 0;
+    background: $secondaryColor;
+  }
+
+  &__inner {
+    color: $white;
+  }
+
+  &__title {
+    margin: 0px 0px 40px 0px;
+    color: $white;
+
+    @media (max-width: $md2) {
+      margin: 0px 0px 35px 0px;
+    }
+
+    @media (max-width: $md3) {
+      margin: 0px 0px 30px 0px;
+    }
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+
+    @media (max-width: $md3) {
+      font-size: 18px;
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    box-shadow: 10px 5px 30px rgba($black, 0.05);
+    background: $white;
+
+    img {
+      max-width: 30px;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__description {
+    a {
+      display: inline-block;
+      margin: 0px 0px 0px 5px;
+      color: inherit;
+      font-weight: 600;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.order-call {
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: $md4) {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    flex: 0 0 auto;
+
+    @media (min-width: $md4) {
+      margin: 0px 20px 0px 0px;
+    }
+  }
+
+  &__description {
+    @media (min-width: $md4) {
+      max-width: 400px;
+      text-align: left;
+    }
+  }
+}
