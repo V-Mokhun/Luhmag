@@ -1,0 +1,135 @@
+.cart {
+  background: #f7f7f7;
+  padding: 0px 0px 70px 0px;
+
+  @media (max-width: $md2) {
+    padding: 0px 0px 60px 0px;
+  }
+
+  @media (max-width: $md3) {
+    padding: 40px 0 50px;
+  }
+
+  @media (max-width: $md4) {
+    padding: 30px 0 40px;
+  }
+
+  &__title {
+    margin: 0px 0px 50px 0px;
+
+    @media (max-width: $md2) {
+      margin: 0px 0px 45px 0px;
+    }
+
+    @media (max-width: $md3) {
+      margin: 0px 0px 40px 0px;
+    }
+  }
+
+  &__info {
+    display: block;
+    text-align: center;
+    margin: 0px 0px 35px 0px;
+  }
+
+  &__button-wrapper {
+    text-align: center;
+  }
+
+  &__summary {
+    color: $titleColor;
+    text-align: right;
+
+    span {
+      font-weight: 300;
+      font-size: 42px;
+      line-height: 120%;
+    }
+  }
+}
+
+// --------------------------------------------------
+.cart-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 0px 40px 0px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 10px 20px 45px rgba(0, 0, 0, 0.05);
+  background: $white;
+
+  @media (max-width: $md3) {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  &__image {
+    margin: 0px 15px 0px 0px;
+    text-align: center;
+
+    img {
+      height: auto;
+      max-width: 70px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: $md3) {
+      flex: 1 1 100%;
+      margin: 0px 0px 10px 0px;
+
+      img {
+        max-width: 120px;
+      }
+    }
+  }
+
+  &__name {
+    margin: 0px 20px 0px 0px;
+    font-weight: 600;
+    color: $secondaryColor;
+    text-align: center;
+
+    @media (min-width: $md3) {
+      max-width: 300px;
+    }
+
+    @media (max-width: $md3) {
+      flex: 1 1 100%;
+      margin: 0px 0px 15px 0px;
+    }
+  }
+
+  &__counter {
+    margin: 0px 20px 0px 0px;
+
+    @media (max-width: $md4) {
+      margin: 0px 0px 10px 0px;
+    }
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 24px;
+
+    @media (max-width: $md4) {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+  }
+
+  &__delete {
+    width: 18px;
+    height: 18px;
+    background: url("../../assets/img/icons/x.svg") 0 0/18px 18px no-repeat;
+  }
+}
+
+// --------------------------------------------------
+.cart-page {
+  &__breadcrumps {
+    background: #f7f7f7;
+  }
+}

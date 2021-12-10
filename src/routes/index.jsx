@@ -1,6 +1,6 @@
 import React from "react";
 import AboutPage from "../pages/AboutPage";
-import Cart from "../pages/Cart";
+import CartPage from "../pages/CartPage";
 import CatalogPage from "../pages/CatalogPage";
 import ContactsPage from "../pages/ContactsPage";
 import DeliveryPage from "../pages/DeliveryPage";
@@ -47,7 +47,7 @@ export const routes = [
   },
   {
     path: CART_ROUTE,
-    Component: <Cart />,
+    Component: <CartPage />,
   },
   {
     path: CONTACTS_ROUTE,

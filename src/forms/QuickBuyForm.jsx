@@ -3,14 +3,14 @@ import { Formik, Form, Field } from "formik";
 import MyInput from "../ui/MyInput";
 import MyButton from "../ui/MyButton";
 import PhoneInput from "../ui/PhoneInput";
-import MyCounter from "../ui/MyCounter";
 import { useNavigate } from "react-router";
 import { HOME_ROUTE, THANK_ORDER_ROUTE } from "../routes/routes";
 import { useDispatch } from "react-redux";
 import { setName, setOrderPrice, setPhone } from "../store/user/userReducer";
+import CartProduct from "../components/Cart/CartProduct";
 
 const QuickBuyForm = ({ className, closeModal, product, ...props }) => {
-  const { image, title: name, price } = product;
+  const { price } = product;
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -60,39 +60,35 @@ const QuickBuyForm = ({ className, closeModal, product, ...props }) => {
     >
       {({ isSubmitting, isValid, values, setValues }) => (
         <Form className={`form ${className ? className : ""}`} {...props}>
-          <div className="quick-buy__product">
-            <div className="quick-buy__image">
-              <img src={image} alt={name} />
-            </div>
-            <h4 className="quick-buy__name">{name}</h4>
-            <MyCounter
-              className="quick-buy__counter"
-              total={values.count}
-              onDecrease={() => {
-                if (values.count <= 1) {
-                  setValues({
-                    ...values,
-                    count: 1,
-                    totalPrice: price,
-                  });
-                } else {
-                  setValues({
-                    ...values,
-                    count: values.count - 1,
-                    totalPrice: (values.count - 1) * price,
-                  });
-                }
-              }}
-              onIncrease={() =>
+          <CartProduct
+            className={"quick-buy__product"}
+            totalPrice={values.totalPrice}
+            total={values.count}
+            onDecrease={() => {
+              if (values.count <= 1) {
                 setValues({
                   ...values,
-                  count: values.count + 1,
-                  totalPrice: (values.count + 1) * price,
-                })
+                  count: 1,
+                  totalPrice: price,
+                });
+              } else {
+                setValues({
+                  ...values,
+                  count: values.count - 1,
+                  totalPrice: (values.count - 1) * price,
+                });
               }
-            />
-            <div className="quick-buy__price">{values.totalPrice}₽</div>
-          </div>
+            }}
+            onIncrease={() =>
+              setValues({
+                ...values,
+                count: values.count + 1,
+                totalPrice: (values.count + 1) * price,
+              })
+            }
+            product={product}
+            noDelete={true}
+          />
           <div className="form__item">
             <Field name="name">
               {({

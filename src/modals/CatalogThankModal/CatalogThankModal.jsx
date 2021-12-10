@@ -1,11 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { CART_ROUTE } from "../../routes/routes";
 import MyButton from "../../ui/MyButton";
 import MyTitle from "../../ui/MyTitle";
 import Modal from "../Modal";
 
 const CatalogThankModal = ({ count, totalPrice, close, ...props }) => {
+  const navigate = useNavigate();
+
   return (
     <Modal className="catalog-thank-modal icon" close={close} {...props}>
       <MyTitle Component="h3" className="catalog-thank-modal__title">
@@ -16,8 +18,10 @@ const CatalogThankModal = ({ count, totalPrice, close, ...props }) => {
       </p>
       <div className="catalog-thank-modal__actions">
         <MyButton
-          Component={Link}
-          to={CART_ROUTE}
+          onClick={() => {
+            close();
+            navigate(CART_ROUTE);
+          }}
           className="catalog-thank-modal__link"
         >
           Перейти в корзину
