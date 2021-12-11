@@ -132,4 +132,40 @@
   &__breadcrumps {
     background: #f7f7f7;
   }
+
+  &__choice-consultation {
+    background: transparent;
+
+    &::after {
+      display: none;
+    }
+
+    .choice-consultation__waves {
+      display: none;
+    }
+
+    .consultation__container {
+      max-width: 1600px;
+    }
+
+    .consultation__inner {
+      flex-direction: row-reverse;
+
+      @media (max-width: $md2) {
+        background: transparent;
+      }
+    }
+
+    .consultation__content {
+      margin: 0px 0px 0px 15px;
+    }
+
+    .choice-consultation__title {
+      color: $titleColor;
+    }
+
+    .choice-consultation__description {
+      color: $textColor;
+    }
+  }
 }

@@ -12,7 +12,7 @@ import MyButton from "../../ui/MyButton";
 import MyTitle from "../../ui/MyTitle";
 import CartProduct from "./CartProduct";
 
-const Cart = () => {
+const Cart = ({ hasProducts }) => {
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const Cart = () => {
           Корзина
         </MyTitle>
         <div className="cart__inner">
-          {products.length > 0 ? (
+          {hasProducts ? (
             <>
               <ul className="cart__list">
                 {products.map((product) => (
