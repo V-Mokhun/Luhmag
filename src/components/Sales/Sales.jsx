@@ -10,8 +10,6 @@ const Sales = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (sales.length > 0) return;
-
     dispatch(fetchSales());
   }, []);
 

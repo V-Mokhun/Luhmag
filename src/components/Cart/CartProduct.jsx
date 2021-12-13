@@ -3,8 +3,7 @@ import MyCounter from "../../ui/MyCounter";
 
 const CartProduct = ({
   className,
-  image,
-  name,
+  product,
   onDecrease,
   onIncrease,
   onDelete,
@@ -12,6 +11,8 @@ const CartProduct = ({
   total,
   noDelete,
 }) => {
+  const { image, title: name } = product;
+
   return (
     <div className={`cart-product ${className ? className : ""}`}>
       <div className="cart-product__image">

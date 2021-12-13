@@ -6,6 +6,7 @@ import BreadcrumpsItem from "../components/Breadcrumps/BreadcrumpsItem";
 import OrderCall from "../components/Call/OrderCall";
 import Cart from "../components/Cart/Cart";
 import ConsultationChoice from "../components/Consultation/ConsultationChoice/ConsultationChoice";
+import Order from "../components/Order/Order";
 
 const CartPage = () => {
   const hasProducts = useSelector((state) => state.cart.products).length > 0;
@@ -26,7 +27,7 @@ const CartPage = () => {
       <Cart hasProducts={hasProducts} />
       <OrderCall />
       {hasProducts ? (
-        <div>Form</div>
+        <Order />
       ) : (
         <ConsultationChoice className={"cart-page__choice-consultation"} />
       )}

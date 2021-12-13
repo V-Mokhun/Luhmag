@@ -30,10 +30,9 @@ const Cart = ({ hasProducts }) => {
                 {products.map((product) => (
                   <CartProduct
                     key={product.id}
-                    name={product.title}
-                    image={product.image}
-                    totalPrice={product.price * product.count}
+                    product={product}
                     total={product.count}
+                    totalPrice={product.price * product.count}
                     onIncrease={() => dispatch(increaseCount(product.id))}
                     onDecrease={() => dispatch(decreaseCount(product.id))}
                     onDelete={() => dispatch(removeFromCart(product.id))}

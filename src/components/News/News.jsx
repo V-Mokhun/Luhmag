@@ -14,7 +14,6 @@ const News = ({ activePageId }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (news.length > 0) return;
     dispatch(fetchNews());
   }, []);
 
