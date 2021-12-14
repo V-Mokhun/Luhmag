@@ -46,7 +46,9 @@ const Catalog = () => {
         <ul className="catalog__list">
           {products &&
             products.length > 0 &&
-            products.map((product) => {
+            products.map((product, idx) => {
+              if (idx > 11) return;
+
               const { id, hit, sale, newItem, title, oldPrice, price } =
                 product;
 
