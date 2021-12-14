@@ -1,6 +1,7 @@
 import React from "react";
 import MyTitle from "../../../ui/MyTitle";
 import CatalogPageFilter from "./CatalogPageFilter";
+import CatalogPageProducts from "./CatalogPageProducts";
 
 const CatalogPageContent = () => {
   return (
@@ -10,6 +11,7 @@ const CatalogPageContent = () => {
           Каталог
         </MyTitle>
         <CatalogPageFilter />
+        <CatalogPageProducts />
       </div>
     </section>
   );
