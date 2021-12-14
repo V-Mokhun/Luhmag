@@ -152,5 +152,151 @@
       "position": "Менеджер по оптовым продажам",
       "email": "shpakov@sluhmag.ru"
     }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "hit": true,
+      "sale": 10,
+      "newItem": true,
+      "title": "Слуховой аппарат Virto B-30 10 NW O (для детей и подростков)",
+      "oldPrice": 15050,
+      "price": 13350
+    },
+    {
+      "id": 2,
+      "hit": false,
+      "sale": 0,
+      "newItem": true,
+      "title": "Слуховой аппарат XM-900A",
+      "oldPrice": 9550,
+      "price": 9550
+    },
+    {
+      "id": 3,
+      "hit": false,
+      "sale": 0,
+      "newItem": false,
+      "title": "Слуховой аппарат Axon V-185",
+      "oldPrice": 1450,
+      "price": 1450
+    },
+    {
+      "id": 4,
+      "hit": false,
+      "sale": 0,
+      "newItem": true,
+      "title": "Слуховой аппарат Axon C-10",
+      "oldPrice": 1290,
+      "price": 1290
+    },
+    {
+      "id": 5,
+      "hit": true,
+      "sale": 5,
+      "newItem": false,
+      "title": "Слуховой аппарат Axon C-10",
+      "oldPrice": 3000,
+      "price": 2850
+    },
+    {
+      "id": 6,
+      "hit": false,
+      "sale": 0,
+      "newItem": true,
+      "title": "Слуховой аппарат Axon A-6",
+      "oldPrice": 2540,
+      "price": 2540
+    },
+    {
+      "id": 7,
+      "hit": false,
+      "sale": 0,
+      "newItem": true,
+      "title": "Слуховой аппарат Axon V-9",
+      "oldPrice": 1970,
+      "price": 1970
+    },
+    {
+      "id": 8,
+      "hit": true,
+      "sale": 0,
+      "newItem": false,
+      "title": "Слуховой аппарат Axon F-16",
+      "oldPrice": 1290,
+      "price": 1290
+    },
+    {
+      "id": 9,
+      "hit": false,
+      "sale": 10,
+      "newItem": true,
+      "title": "Слуховой аппарат Axon C-10",
+      "oldPrice": 2500,
+      "price": 2250
+    },
+    {
+      "id": 10,
+      "hit": false,
+      "sale": 0,
+      "newItem": false,
+      "title": "Слуховой аппарат XM-919",
+      "oldPrice": 1160,
+      "price": 1160
+    },
+    {
+      "id": 11,
+      "hit": false,
+      "sale": 0,
+      "newItem": false,
+      "title": "Слуховой аппарат Jinghao JH-129",
+      "oldPrice": 1690,
+      "price": 1690
+    },
+    {
+      "id": 12,
+      "hit": true,
+      "sale": 0,
+      "newItem": false,
+      "title": "Слуховой аппарат Axon K-86",
+      "oldPrice": 1240,
+      "price": 1240
+    },
+    {
+      "id": 13,
+      "hit": false,
+      "sale": 0,
+      "newItem": true,
+      "title": "Слуховой аппарат EM G-17",
+      "oldPrice": 3240,
+      "price": 3240
+    },
+    {
+      "id": 14,
+      "hit": true,
+      "sale": 15,
+      "newItem": false,
+      "title": "Слуховой аппарат EM G-20",
+      "oldPrice": 1500,
+      "price": 1350
+    },
+    {
+      "id": 15,
+      "hit": false,
+      "sale": 0,
+      "newItem": false,
+      "title": "Слуховой аппарат EM G-15",
+      "oldPrice": 1800,
+      "price": 1800
+    },
+    {
+      "id": 16,
+      "hit": false,
+      "sale": 0,
+      "newItem": false,
+      "title": "Слуховой аппарат EM G-21",
+      "oldPrice": 2090,
+      "price": 2090
+    }
   ]
 }

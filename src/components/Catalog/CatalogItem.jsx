@@ -13,7 +13,6 @@ const CatalogItem = ({
   oldPrice,
   price,
   onAdd,
-  onThank,
 }) => {
   const [buyModal, setBuyModal] = useState(false);
 
@@ -45,7 +44,9 @@ const CatalogItem = ({
           </div>
           <h4 className="item-catalog__title">{title}</h4>
           <div className="item-catalog__price">
-            <span className="item-catalog__price-old">{oldPrice} ₽</span>
+            {sale > 0 && (
+              <span className="item-catalog__price-old">{oldPrice} ₽</span>
+            )}
             <span className="item-catalog__price-new">{price} ₽</span>
           </div>
         </Link>
@@ -60,10 +61,7 @@ const CatalogItem = ({
           <button
             className="item-catalog__button item-catalog__button-cart"
             type="button"
-            onClick={() => {
-              onAdd();
-              onThank();
-            }}
+            onClick={onAdd}
           >
             В корзину
           </button>

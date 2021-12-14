@@ -8,135 +8,21 @@ import MyButton from "../../ui/MyButton";
 import { Link } from "react-router-dom";
 import { CATALOG_ROUTE } from "../../routes/routes";
 import CatalogThankModal from "../../modals/CatalogThankModal/CatalogThankModal";
-
-const PRODUCTS = [
-  {
-    id: 1,
-    hit: true,
-    sale: 10,
-    newItem: true,
-    image,
-    title: "Слуховой аппарат Virto B-30 10 NW O (для детей и подростков)",
-    oldPrice: 15050,
-    price: 13350,
-  },
-  {
-    id: 2,
-    hit: true,
-    sale: 10,
-    newItem: false,
-    image,
-    title: "Слуховой аппарат XM-900A",
-    oldPrice: 17500,
-    price: 15750,
-  },
-  {
-    id: 3,
-    hit: true,
-    sale: 0,
-    newItem: false,
-    image,
-    title: "Слуховой аппарат XM-900A",
-    oldPrice: 17500,
-    price: 15750,
-  },
-  {
-    id: 4,
-    hit: true,
-    sale: 0,
-    newItem: false,
-    image,
-    title: "Слуховой аппарат Virto B-30 10 NW O (для детей и подростков)",
-    oldPrice: 15050,
-    price: 13350,
-  },
-  {
-    id: 5,
-    hit: true,
-    sale: 10,
-    newItem: true,
-    image,
-    title: "Слуховой аппарат Virto B-30 10 NW O (для детей и подростков)",
-    oldPrice: 15050,
-    price: 13350,
-  },
-  {
-    id: 6,
-    hit: true,
-    sale: 10,
-    newItem: false,
-    image,
-    title: "Слуховой аппарат XM-900A",
-    oldPrice: 17500,
-    price: 15750,
-  },
-  {
-    id: 7,
-    hit: true,
-    sale: 0,
-    newItem: false,
-    image,
-    title: "Слуховой аппарат XM-900A",
-    oldPrice: 17500,
-    price: 15750,
-  },
-  {
-    id: 8,
-    hit: true,
-    sale: 0,
-    newItem: false,
-    image,
-    title: "Слуховой аппарат Virto B-30 10 NW O (для детей и подростков)",
-    oldPrice: 15050,
-    price: 13350,
-  },
-  {
-    id: 9,
-    hit: true,
-    sale: 10,
-    newItem: true,
-    image,
-    title: "Слуховой аппарат Virto B-30 10 NW O (для детей и подростков)",
-    oldPrice: 15050,
-    price: 13350,
-  },
-  {
-    id: 10,
-    hit: true,
-    sale: 10,
-    newItem: false,
-    image,
-    title: "Слуховой аппарат XM-900A",
-    oldPrice: 17500,
-    price: 15750,
-  },
-  {
-    id: 11,
-    hit: true,
-    sale: 0,
-    newItem: false,
-    image,
-    title: "Слуховой аппарат XM-900A",
-    oldPrice: 17500,
-    price: 15750,
-  },
-  {
-    id: 12,
-    hit: true,
-    sale: 0,
-    newItem: false,
-    image,
-    title: "Слуховой аппарат Virto B-30 10 NW O (для детей и подростков)",
-    oldPrice: 15050,
-    price: 13350,
-  },
-];
+import { useEffect } from "react";
+import { fetchProducts } from "../../store/app/thunks";
 
 const Catalog = () => {
+  const [thankModal, setThankModal] = useState(false);
+
+  const products = useSelector((state) => state.app.products);
   const productsCount = useSelector((state) => state.cart.productsCount);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
-  const [thankModal, setThankModal] = useState(false);
+
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, []);
 
   return (
     <section className="catalog">
@@ -158,35 +44,37 @@ const Catalog = () => {
           Каталог
         </MyTitle>
         <ul className="catalog__list">
-          {PRODUCTS.map((product) => {
-            const { id, hit, sale, newItem, image, title, oldPrice, price } =
-              product;
+          {products &&
+            products.length > 0 &&
+            products.map((product) => {
+              const { id, hit, sale, newItem, title, oldPrice, price } =
+                product;
 
-            return (
-              <CatalogItem
-                key={id}
-                id={id}
-                hit={hit}
-                sale={sale}
-                newItem={newItem}
-                image={image}
-                title={title}
-                oldPrice={oldPrice}
-                price={price}
-                onAdd={() => {
-                  dispatch(
-                    addToCart({
-                      id,
-                      image,
-                      title,
-                      price,
-                    })
-                  );
-                }}
-                onThank={() => setThankModal(true)}
-              />
-            );
-          })}
+              return (
+                <CatalogItem
+                  key={id}
+                  id={id}
+                  hit={hit}
+                  sale={sale}
+                  newItem={newItem}
+                  image={image}
+                  title={title}
+                  oldPrice={oldPrice}
+                  price={price}
+                  onAdd={() => {
+                    dispatch(
+                      addToCart({
+                        id,
+                        image,
+                        title,
+                        price,
+                      })
+                    );
+                    setThankModal(true);
+                  }}
+                />
+              );
+            })}
         </ul>
         <div className="catalog__link-wrapper">
           <MyButton

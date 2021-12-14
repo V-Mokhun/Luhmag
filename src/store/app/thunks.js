@@ -30,3 +30,16 @@ export const fetchWorkers = createAsyncThunk(`app/workers`, async () => {
   const response = await appApi.getWorkers();
   return response;
 });
+
+export const fetchProducts = createAsyncThunk(`app/products`, async () => {
+  const response = await appApi.getProducts();
+  return response;
+});
+
+export const fetchOneProduct = createAsyncThunk(
+  `app/one-product`,
+  async (productId) => {
+    const response = await appApi.getOneProduct(productId);
+    return response;
+  }
+);

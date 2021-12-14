@@ -1,11 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchNews, fetchReviews, fetchSales, fetchWorkers } from "./thunks";
+import {
+  fetchNews,
+  fetchProducts,
+  fetchReviews,
+  fetchSales,
+  fetchWorkers,
+} from "./thunks";
 
 const initialState = {
   reviews: [],
   news: [],
   sales: [],
   workers: [],
+  products: [],
 };
 
 const appSlice = createSlice({
@@ -24,6 +31,9 @@ const appSlice = createSlice({
     });
     builder.addCase(fetchWorkers.fulfilled, (state, action) => {
       state.workers = action.payload;
+    });
+    builder.addCase(fetchProducts.fulfilled, (state, action) => {
+      state.products = action.payload;
     });
   },
 });

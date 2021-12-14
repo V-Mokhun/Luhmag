@@ -37,4 +37,14 @@ export const appApi = {
       return resp.data;
     });
   },
+  getProducts() {
+    return $host.get("products").then((resp) => {
+      return resp.data;
+    });
+  },
+  getOneProduct(id) {
+    return $host.get(`products/${id}`).then((resp) => {
+      return resp.data;
+    });
+  },
 };
