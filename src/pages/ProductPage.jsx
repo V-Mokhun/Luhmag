@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import Breadcrumps from "../components/Breadcrumps/Breadcrumps";
 import BreadcrumpsItem from "../components/Breadcrumps/BreadcrumpsItem";
+import Product from "../components/Product/Product";
 import Recommendation from "../components/Recommendation/Recommendation";
 import { fetchOneProduct } from "../store/app/thunks";
 
@@ -24,6 +25,7 @@ const ProductPage = () => {
           <span>{product.title}</span>
         </BreadcrumpsItem>
       </Breadcrumps>
+      <Product product={product} />
       <Recommendation activePageId={product.id} />
     </section>
   );
