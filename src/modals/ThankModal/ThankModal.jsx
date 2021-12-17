@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import MyTitle from "../../ui/MyTitle";
 import Modal from "../Modal";
 
-const CallModal = ({ children, ...props }) => {
+const ThankModal = ({ children, ...props }) => {
   const name = useSelector((state) => state.user.name);
 
   return (
@@ -16,4 +16,4 @@ const CallModal = ({ children, ...props }) => {
   );
 };
 
-export default CallModal;
+export default ThankModal;

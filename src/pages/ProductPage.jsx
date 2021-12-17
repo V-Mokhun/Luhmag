@@ -15,6 +15,7 @@ const ProductPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    window.scroll({ top: 0 });
     dispatch(fetchOneProduct(id)).then((data) => setProduct(data.payload));
   }, [id]);
 
