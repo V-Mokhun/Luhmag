@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import CatalogBuyModal from "../../modals/QuickBuyModal/QuickBuyModal";
+import QuickBuyModal from "../../modals/QuickBuyModal/QuickBuyModal";
 import { PRODUCT_ROUTE } from "../../routes/routes";
 
 const CatalogItem = ({
@@ -67,7 +67,7 @@ const CatalogItem = ({
           </button>
         </div>
       </li>
-      <CatalogBuyModal
+      <QuickBuyModal
         show={buyModal}
         close={() => setBuyModal(false)}
         product={{

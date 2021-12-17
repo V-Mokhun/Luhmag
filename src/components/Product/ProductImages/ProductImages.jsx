@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../assets/img/content/product-1.jpg";
+import image from "../../../assets/img/content/product-1.jpg";
 import ProductSlider from "./ProductSlider";
 import ProductSliderItem from "./ProductSliderItem";
 import { SwiperSlide } from "swiper/react/swiper-react";

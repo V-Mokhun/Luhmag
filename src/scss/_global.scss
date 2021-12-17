@@ -170,6 +170,32 @@ body {
 }
 
 // --------------------------------------------------
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  user-select: none;
+
+  img {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    object-fit: cover;
+    animation: spin 1.5s linear infinite reverse;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// --------------------------------------------------
 .label {
   display: block;
   position: relative;

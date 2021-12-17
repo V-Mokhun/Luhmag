@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { PRODUCT_ROUTE } from "../../routes/routes";
 import MyCounter from "../../ui/MyCounter";
 
 const CartProduct = ({
@@ -11,14 +13,20 @@ const CartProduct = ({
   total,
   noDelete,
 }) => {
-  const { image, title: name } = product;
+  const { image, title, id } = product;
 
   return (
-    <div className={`cart-product ${className ? className : ""}`}>
+    <div
+      className={`cart-product ${className ? className : ""} ${
+        noDelete ? "cart-product--delete" : ""
+      }`}
+    >
       <div className="cart-product__image">
-        <img src={image} alt={name} />
+        <img src={image} alt={title} />
       </div>
-      <h4 className="cart-product__name">{name}</h4>
+      <Link to={`${PRODUCT_ROUTE}/${id}`} className="cart-product__name">
+        {title}
+      </Link>
       <MyCounter
         className="cart-product__counter"
         total={total}
