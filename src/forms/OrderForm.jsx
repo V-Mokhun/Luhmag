@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Formik, Form, Field } from "formik";
 import MyInput from "../ui/MyInput";
 import MyButton from "../ui/MyButton";
@@ -9,9 +9,10 @@ import { useNavigate } from "react-router";
 import { HOME_ROUTE, THANK_ORDER_ROUTE } from "../routes/routes";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import CityModal from "../modals/CityModal/CityModal";
 import { useState } from "react";
 import { clearCart } from "../store/cart/cartReducer";
+import MyLoader from "../ui/MyLoader";
+const CityModal = React.lazy(() => import("../modals/CityModal/CityModal"));
 
 const OrderForm = ({ className, ...props }) => {
   const dispatch = useDispatch();
@@ -108,7 +109,9 @@ const OrderForm = ({ className, ...props }) => {
               >
                 {city}
               </button>
-              <CityModal show={modal} close={() => setModal(false)} />
+              <Suspense fallback={<MyLoader className={"fallback__loader"} />}>
+                <CityModal show={modal} close={() => setModal(false)} />
+              </Suspense>
             </div>
             <div className="form__address form__item">
               <Field name="address">

@@ -171,6 +171,12 @@ body {
 
 // --------------------------------------------------
 .loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 15;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,6 +189,13 @@ body {
     margin: auto;
     object-fit: cover;
     animation: spin 1.5s linear infinite reverse;
+  }
+}
+
+.fallback__loader {
+  img {
+    width: 100px;
+    height: 100px;
   }
 }
 

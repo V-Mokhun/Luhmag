@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import CityModal from "../../modals/CityModal/CityModal";
+import React, { Suspense, useState } from "react";
+import MyLoader from "../../ui/MyLoader";
+const CityModal = React.lazy(() => import("../../modals/CityModal/CityModal"));
 
 const HeaderCity = ({ city }) => {
   const [modal, setModal] = useState(false);
@@ -15,7 +16,9 @@ const HeaderCity = ({ city }) => {
         <span className="header__city-name"> {city}</span>
       </button>
       <span className="header__city-street">ул. Ленинградская, 100</span>
-      <CityModal show={modal} close={() => setModal(false)} />
+        <Suspense fallback={<MyLoader className={"fallback__loader"} />}>
+        <CityModal show={modal} close={() => setModal(false)} />
+      </Suspense>
     </div>
   );
 };

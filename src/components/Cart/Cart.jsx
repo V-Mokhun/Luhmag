@@ -1,4 +1,5 @@
 import React from "react";
+import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -13,9 +14,22 @@ import MyTitle from "../../ui/MyTitle";
 import CartProduct from "./CartProduct";
 
 const Cart = ({ hasProducts }) => {
+  // console.log("render CART")
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
+
+  const onProductIncrease = useCallback((id) => {
+    dispatch(increaseCount(id));
+  }, []);
+
+  const onProductDecrease = useCallback((id) => {
+    dispatch(decreaseCount(id));
+  }, []);
+
+  const onProductDelete = useCallback((id) => {
+    dispatch(removeFromCart(id));
+  }, []);
 
   return (
     <section className="cart">
@@ -33,9 +47,9 @@ const Cart = ({ hasProducts }) => {
                     product={product}
                     total={product.count}
                     totalPrice={product.price * product.count}
-                    onIncrease={() => dispatch(increaseCount(product.id))}
-                    onDecrease={() => dispatch(decreaseCount(product.id))}
-                    onDelete={() => dispatch(removeFromCart(product.id))}
+                    onIncrease={() => onProductIncrease(product.id)}
+                    onDecrease={() => onProductDecrease(product.id)}
+                    onDelete={() => onProductDelete(product.id)}
                   />
                 ))}
               </ul>

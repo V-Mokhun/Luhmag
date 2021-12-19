@@ -14,7 +14,6 @@ const CartProduct = ({
   noDelete,
 }) => {
   const { image, title, id } = product;
-
   return (
     <div
       className={`cart-product ${className ? className : ""} ${
